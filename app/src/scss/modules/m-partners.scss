@@ -1,0 +1,43 @@
+.m-partners {
+  text-align: center;
+
+  margin-top: 2em;
+  margin-bottom: 5em;
+
+  &:hover &__list {
+    animation-play-state: paused;
+  }
+
+  &__body {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0;
+
+    animation: 40s linear infinite pan;
+
+    transform-style: preserve-3d;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  &__image {
+    max-width: initial;
+  }
+
+  &__note {
+    font-size: .875em;
+
+    color: hsb(0, 0, 40);
+  }
+}

@@ -1,0 +1,26 @@
+$c-color--150: hsb(48, 60, 100);
+$c-color--140: hsb(38, 65, 100);
+
+$c-color--200: hsb(211, 100, 100);
+
+$c-color--300: hsb(82, 8, 98);
+
+$c-grey--500: hsb(0, 0, 50);
+
+$c-nrp: hsb(211, 100, 100);
+$c-rp:  hsb(130, 65, 85);
+$c-ps:  hsb(287, 50, 75);
+$c-dpc: hsb(0, 0, 75);
+$c-adm: hsb(47, 100, 95);
+$c-dmd: hsb(197, 70, 85);
+$c-sas: hsb(17, 50, 100);
+$c-sa:  hsb(77, 60, 85);
+$c-p:   hsb(347, 80, 75);
+
+$c-link:    black;
+$c-visited: $c-link;
+$c-hover:   black;
+$c-active:  $c-hover;
+
+$c-select__bg:   black;
+$c-select__text: white;

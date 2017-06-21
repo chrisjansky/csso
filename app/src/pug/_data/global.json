@@ -1,0 +1,112 @@
+{
+  "categories": [
+    {
+      "name": "Rodina",
+      "thumb": "cat-family.jpg"
+    },
+    {
+      "name": "Děti",
+      "thumb": "cat-kids.jpg"
+    },
+    {
+      "name": "Bydlení",
+      "thumb": "cat-living.jpg"
+    },
+    {
+      "name": "Péče o blízkého",
+      "thumb": "cat-care.jpg"
+    },
+    {
+      "name": "Zaměstnání",
+      "thumb": "cat-work.jpg"
+    },
+    {
+      "name": "Vzdělávání",
+      "thumb": "cat-education.jpg"
+    }
+  ],
+  "services": [
+    {
+      "id": "nrp",
+      "name": "Náhradní rodinná péče"
+    },
+    {
+      "id": "rp",
+      "name": "Rodinná poradna"
+    },
+    {
+      "id": "ps",
+      "name": "Pečovatelská služba"
+    },
+    {
+      "id": "dpc",
+      "name": "Sociální služba Dům na půl cesty"
+    },
+    {
+      "id": "adm",
+      "name": "Azylový dům pro muže"
+    },
+    {
+      "id": "dmd",
+      "name": "Azylový dům pro matky s&nbsp;dětmi"
+    },
+    {
+      "id": "sas",
+      "name": "Sociálně aktivizační služba pro rodiny s&nbsp;dětmi"
+    },
+    {
+      "id": "sa",
+      "name": "Sociální akademie"
+    },
+    {
+      "id": "p",
+      "name": "Projekty"
+    }
+  ],
+  "people": {
+    "main": [
+      {
+        "name": "Ing. Jiří Draslík",
+        "position": "Ředitel",
+        "phone": "599 455 118",
+        "email": "jdrastik@css-ostrava.cz"
+      },
+      {
+        "name": "Bc. Jana Blokšová",
+        "position": "Organizační pracovník",
+        "phone": "599 455 121",
+        "email": "css@css-ostrava.cz"
+      },
+      {
+        "name": "Bc. Markéta Flaksová",
+        "position": "Manažer lidských zdrojů a vnějších vztahů",
+        "phone": "599 455 117",
+        "email": "mflaksova@css-ostrava.cz"
+      },
+      {
+        "name": "Ing. Markéta Hořáková",
+        "position": "Produktový a finanční manažer",
+        "phone": "599 455 117",
+        "email": "mhorakova@css-ostrava.cz"
+      },
+      {
+        "name": "Ing. Kristýna Švecová",
+        "position": "Administrativní pracovník",
+        "phone": "599 455 119",
+        "email": "ksvecova@css-ostrava.cz"
+      },
+      {
+        "name": "Ing. Michaela Žižková",
+        "position": "Administrativní pracovník",
+        "phone": "599 455 119",
+        "email": "mzizkova@css-ostrava.cz"
+      },
+      {
+        "name": "Mgr. Veronika Dlouhá",
+        "position": "Manažer rozvoje",
+        "phone": "599 455 114",
+        "email": "vdlouha@css-ostrava.cz"
+      }
+    ]
+  }
+}

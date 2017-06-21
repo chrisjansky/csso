@@ -1,0 +1,152 @@
+.m-finder {
+  margin-top: 3em;
+  @include a-wrap;
+
+  max-width: 70em;
+
+  text-align: center;
+
+  &__title {
+    @include a-head--1;
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 4em;
+  }
+
+  &__thumb {
+    display: block;
+
+    width: 7em;
+    height: 7em;
+    margin-bottom: 1em;
+
+    border-radius: 50%;
+
+    background-size: cover;
+  }
+
+  &__results {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 4em;
+
+    overflow: hidden;
+
+    max-height: 10em;
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: linear-gradient(to bottom, rgba(white, 0), rgba(white, 1));  
+    }
+  }
+
+  &__id {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+
+    margin-top: -1em;
+
+    font-size: .5em;
+    font-weight: $font__sans--semibold;
+    line-height: 4em;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+
+    border-radius: 50%;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.09);
+
+    .m-finder__service--nrp & {color: $c-nrp; }
+    .m-finder__service--rp &  {color: $c-rp; }
+    .m-finder__service--ps &  {color: $c-ps; }
+    .m-finder__service--dpc & {color: $c-dpc; }
+    .m-finder__service--adm & {color: $c-adm; }
+    .m-finder__service--dmd & {color: $c-dmd; }
+    .m-finder__service--sas & {color: $c-sas; }
+    .m-finder__service--sa &  {color: $c-sa; }
+    .m-finder__service--p &   {color: $c-p; }
+  }
+
+  /* Stupid normalize.css hack */
+  & &__id {
+    text-decoration: none;
+  }
+
+  &__name {
+    display: block;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    font-weight: $font__sans--regular;
+  }
+
+  &__hint {
+    position: absolute;
+    bottom: 1.75em;
+    left: 0;
+    right: 0;
+
+    text-transform: uppercase;
+    font-size: .75em;
+    letter-spacing: .125em;
+
+    color: $c-color--200;
+
+    opacity: 0;
+
+    transition: opacity $duration--b;
+
+    [class^="m-finder__service--"]:hover &,
+    [class*=" m-finder__service--"]:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+
+    @include button-large;
+
+    color: white;
+    background-color: $c-color--200;
+  }
+}
+
+[class^="m-finder__service--"],
+[class*=" m-finder__service--"] {
+  position: relative;
+
+  flex-basis: 18em;
+
+  margin: .5em;
+  padding: 1em 1.5em 2.75em;
+
+  border-radius: 2px;
+
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+
+  transition: box-shadow $duration--s;
+
+  &:hover {
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,.1), 0 10px 20px 0 rgba(0,0,0,.1);
+  }
+}

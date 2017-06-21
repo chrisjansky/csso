@@ -1,0 +1,15 @@
+.s-results {
+  .services--is-active & {
+    max-height: initial;
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.s-services {
+  .services--is-active & {
+    display: none;
+  }
+}

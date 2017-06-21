@@ -1,0 +1,57 @@
+.m-people {
+  text-align: center;
+
+  &__title {
+    @include a-head--2;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    flex-basis: 18em;
+
+    margin: .5em;
+    padding: 1em 1.5em;
+
+    border-radius: 2px;
+
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+
+    transition: box-shadow $duration--s;
+  }
+
+  &__name {
+    display: block;
+
+    font-size: 1.125em;
+    font-family: $font__sans;
+    font-weight: $font__sans--semibold;
+  }
+
+  &__position {
+    font-size: .75em;
+    color: $c-grey--500;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: space-around;
+
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1em;
+
+    font-size: .75em;
+  }
+
+  &__abbr[title] {
+    text-decoration: none;
+  }
+}

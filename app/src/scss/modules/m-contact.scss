@@ -1,0 +1,30 @@
+.m-contact {
+  @include a-wrap;
+
+  text-align: center;
+
+  &__title {
+    @include a-head--1;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__caps {
+    display: block;
+
+    font-size: .75em;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+
+    color: $c-grey--500;
+
+    margin-bottom: 1em;
+  }
+
+  &__strong {
+    @include a-head--1;
+  }
+}

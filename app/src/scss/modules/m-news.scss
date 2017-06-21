@@ -1,0 +1,47 @@
+.m-news {
+  @include a-wrap;
+
+  text-align: center;
+
+  &__title {
+    @include a-head--2;
+  }
+
+  &__item {
+    @include clearfix;
+
+    margin-bottom: 2.5em;
+  }
+
+  &__thumb {
+    float: left;
+    width: 50%;
+  }
+
+  &__body {
+    overflow: auto;
+
+    padding-left: 2em;
+
+    text-align: left;
+  }
+  
+  &__content {
+    h2 {
+      @include a-head--3;
+    }
+
+    time {
+      color: hsb(0, 0, 60);
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+    margin-top: 2em;
+
+    @include button-large;
+    
+    background-color: hsb(0, 0, 95);
+  }
+}

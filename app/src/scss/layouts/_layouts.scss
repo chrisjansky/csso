@@ -1,0 +1,11 @@
+@mixin a-wrap {
+  padding: 3em;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include reset-children;
+}
+
+.l-wrap {
+  @include a-wrap;
+}
