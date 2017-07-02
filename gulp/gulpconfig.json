@@ -40,8 +40,13 @@
   "assets": {
     "dev": [
       "node_modules/normalize.css/normalize.css",
+      "node_modules/featherlight/src/featherlight.css",
+      "node_modules/featherlight/src/featherlight.gallery.css",
 
       "app/src/temp/style.css",
+
+      "node_modules/featherlight/src/featherlight.js",
+      "node_modules/featherlight/src/featherlight.gallery.js",
 
       "app/src/temp/bundle.js"
     ],
