@@ -1,13 +1,13 @@
 .m-finder {
-  margin-top: 3em;
-  @include a-wrap;
+  @include a-wrap("top");
+  padding-bottom: 0;
 
   max-width: 70em;
 
   text-align: center;
 
   &__title {
-    @include a-head--1;
+    @include a-head--2;
   }
 
   &__categories {
@@ -72,7 +72,7 @@
     letter-spacing: .125em;
 
     border-radius: 50%;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.09);
+    box-shadow: $shadow--1;
 
     .m-finder__service--nrp & {color: $c-nrp; }
     .m-finder__service--rp &  {color: $c-rp; }
@@ -93,7 +93,7 @@
   &__name {
     display: block;
 
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-bottom: 1em;
 
     font-weight: $font__sans--regular;
@@ -109,7 +109,7 @@
     font-size: .75em;
     letter-spacing: .125em;
 
-    color: $c-color--200;
+    color: $c-link;
 
     opacity: 0;
 
@@ -138,15 +138,16 @@
   flex-basis: 18em;
 
   margin: .5em;
-  padding: 1em 1.5em 2.75em;
+  padding: 1em 1.5em 2em;
 
-  border-radius: 2px;
+  border-radius: $radius--l;
+  box-shadow: $shadow--2;
 
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  @include link-dark;
 
   transition: box-shadow $duration--s;
 
   &:hover {
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,.1), 0 10px 20px 0 rgba(0,0,0,.1);
+    box-shadow: $shadow--3;
   }
 }

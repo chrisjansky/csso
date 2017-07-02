@@ -1,20 +1,23 @@
 @mixin a-head--1 {
   font-family: $font__narrow;
+  font-weight: $font__sans--extrabold;
+  font-size: 2.75em;
+  line-height: $leading--s;
+}
+
+@mixin a-head--2 {
+  font-family: $font__narrow;
   font-weight: $font__sans--light;
   font-size: 2.25em;
 }
 
-@mixin a-head--2 {
-  font-family: $font__sans;
-  font-weight: $font__sans--extrabold;
+@mixin a-head--3 {
   font-size: 1.5em;
-
-  margin-top: 2em;
-  margin-bottom: 2em;
+  font-family: $font__narrow;
+  font-weight: $font__sans--regular;
 }
 
-@mixin a-head--3 {
-  font-family: $font__sans;
-  font-weight: $font__sans--light;
-  font-size: 1.5em;
+@mixin a-head--4 {
+  font-size: 1.125em;
+  font-weight: $font__sans--semibold;
 }

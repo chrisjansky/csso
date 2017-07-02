@@ -107,6 +107,84 @@
         "phone": "599 455 114",
         "email": "vdlouha@css-ostrava.cz"
       }
+    ],
+    "nrp": [
+      {
+        "name": "Mgr. Hana Schwarz",
+        "position": "Vedoucí NRP a sociální pracovnice",
+        "phone": "733 714 048",
+        "email": "hschwarz@css-ostrava.cz"
+      },
+      {
+        "name": "Mgr. Veronika Gawlíková",
+        "position": "Sociální pracovnice, pověřena zastupováním vedoucí NRP",
+        "phone": "732 701 429",
+        "email": "vgawlikova@css-ostrava.cz"
+      },
+      {
+        "name": "Bc. Barbora Bednářová",
+        "position": "Metodička",
+        "phone": "604 391 460",
+        "email": "bbednarova@css-ostrava.cz"
+      },
+      {
+        "name": "Bc. et Bc. Zuzana Štěpánová, DiS.",
+        "position": "Sociální pracovnice",
+        "phone": "732 701 427",
+        "email": "zstepanova@css-ostrava.cz"
+      },
+      {
+        "name": "Bc. Veronika Kirschnerová",
+        "position": "Sociální pracovnice",
+        "phone": "733 129 516",
+        "email": "vkirschnerova@css-ostrava.cz"
+      },
+      {
+        "name": "Mgr. Alena Hudečková",
+        "position": "Sociální pracovnice",
+        "phone": "731 084 714",
+        "email": "ahudeckova@css-ostrava.cz"
+      },
+      {
+        "name": "Mgr. Marta Švábová, DiS.",
+        "position": "Sociální pracovnice Ostrava a Odry",
+        "phone": "604 787 939",
+        "email": "msvabova@css-ostrava.cz"
+      },
+      {
+        "name": "Blanka Dombrovská, DiS.",
+        "position": "Sociální pracovnice",
+        "phone": "737 548 732",
+        "email": "bdombrovska@css-ostrava.cz"
+      },
+      {
+        "name": "Bc. Petra Paloncyová",
+        "position": "Sociální pracovnice Karviná",
+        "phone": "732 835 219",
+        "email": "ppaloncyova@css-ostrava.cz"
+      },
+      {
+        "name": "Mgr. Petr Holinka ",
+        "position": "Sociální pracovník",
+        "phone": "604 391 430",
+        "email": "pholinka@css-ostrava.cz"
+      },
+      {
+        "name": "Mgr. Gabriela Kahánková",
+        "position": "Odborná pracovnice, psycholožka"
+      },
+      {
+        "name": "Bc. Veronika Zajícová",
+        "position": "Odborná pracovnice, terapeutka"
+      },
+      {
+        "name": "Mgr. Marcela Horáčková",
+        "position": "Externí terapeutka DDP"
+      },
+      {
+        "name": "PhDr. Pavel Řezáč, Ph.D.",
+        "position": "Externí psycholog"
+      }
     ]
   }
 }

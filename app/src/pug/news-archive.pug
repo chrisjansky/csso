@@ -1,0 +1,32 @@
+extends _templates/_site
+
+append template-variables
+  - var theme = "news"
+
+block template-body
+  header.c-header--slim
+    .c-header__wrap
+      .c-header__top
+        a.c-logo(href="index.html")
+          img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
+          strong.c-logo__text Centrum sociálních služeb Ostrava
+
+        button.c-nav__button(type="button") Menu
+
+      .c-header__body
+        h1.c-header__text Archiv novinek
+
+  .s-archive__news.m-news
+    .m-news__loop
+      each instance in [1, 2, 3, 4, 5, 6]
+        +article(instance)
+
+    .m-news__footer
+      a.m-news__pagination(href="javascript:") &larr; Novější
+      a.m-news__pagination(href="javascript:") Starší &rarr;
+
+  include _partials/_contact
+
+  include _partials/_partners
+
+  include _partials/_footer

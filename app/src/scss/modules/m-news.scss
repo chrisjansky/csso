@@ -1,10 +1,11 @@
 .m-news {
-  @include a-wrap;
+  @include a-wrap("both");
 
   text-align: center;
 
   &__title {
-    @include a-head--2;
+    @include a-head--1;
+    margin-bottom: 1.5em;
   }
 
   &__item {
@@ -13,9 +14,32 @@
     margin-bottom: 2.5em;
   }
 
-  &__thumb {
+  &__holder {
+    position: relative;
+    overflow: hidden;
+
     float: left;
     width: 50%;
+
+    padding-bottom: 33.333%;
+
+    background-color: $c-color--150;
+
+    .m-news__item:nth-child(2n) & {
+      background-color: palegreen;
+    }
+    .m-news__item:nth-child(3n) & {
+      background-color: paleturquoise;
+    }
+    .m-news__item:nth-child(4n) & {
+      background-color: mistyrose;
+    }
+  }
+
+  &__thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   &__body {
@@ -26,22 +50,100 @@
     text-align: left;
   }
   
+  &__headline {
+    @include a-head--2;
+    
+    margin-top: 0;
+  }
+
+  &__date {
+    color: $c-grey--600;
+  }
+
   &__content {
-    h2 {
-      @include a-head--3;
+    position: relative;
+
+    overflow: hidden;
+    max-height: 15em;
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 50%;
+
+      background-image: linear-gradient(to bottom, rgba(white, 0), rgba(white, 1));
     }
 
-    time {
-      color: hsb(0, 0, 60);
+    .more--is-active & {
+      max-height: initial;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &__button {
+    @include reset-button;
+    @include button-outline;
+
+    margin-top: 2em;
+
+    svg {
+      fill: currentColor;
+
+      vertical-align: middle;
+      margin-right: .75em;
+    }
+
+    color: $c-link;
+
+    &:hover {
+      color: $c-hover;
+    }
+    &:focus {
+      outline: 0;
+    }
+
+    .more--is-active & {
+      display: none;
     }
   }
 
   &__cta {
     display: inline-block;
-    margin-top: 2em;
+    margin-top: 3em;
 
     @include button-large;
     
-    background-color: hsb(0, 0, 95);
+    background-color: $c-grey--950;
+
+    &:hover,
+    &:active {
+      background-color: $c-grey--800;
+    }
+  }
+
+  &__footer {
+    margin-top: 5em;
+  }
+
+  &__pagination {
+    @include button-medium(true);
+
+    margin-left: .5em;
+    margin-right: .5em;
+
+    background-color: $c-grey--950;
+
+    &:hover,
+    &:active {
+      background-color: $c-grey--800;
+    }
   }
 }

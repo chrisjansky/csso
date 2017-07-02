@@ -1,0 +1,48 @@
+.c-tabs {
+  &__nav {
+    text-align: center;
+
+    margin-top: 2em;
+  }
+
+  &__item {
+    display: none;
+
+    &.tab--is-active {
+      display: block;
+    }
+  }
+
+  &__link {
+    @include reset-button;
+    @include button-medium(false);
+
+    margin-left: .5em;
+    margin-right: .5em;
+
+    color: $c-link;
+    background-color: transparent;
+    border: 1px solid rgba($c-link, .25);
+
+    &:hover {
+      color: $c-hover;
+      border-color: rgba($c-hover, .375);
+    }
+
+    &.tab--is-active {
+      color: $c-grey--100;
+      background-color: white;
+      border-color: transparent;
+
+      box-shadow: $shadow--2;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__item {
+    margin-top: 2em;
+  }
+}

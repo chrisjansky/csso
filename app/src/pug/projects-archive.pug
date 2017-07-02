@@ -1,0 +1,49 @@
+extends _templates/_site
+
+append template-variables
+  - var theme = "projects"
+
+block template-body
+  header.c-header--slim
+    .c-header__wrap
+      .c-header__top
+        a.c-logo(href="index.html")
+          img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
+          strong.c-logo__text Centrum sociálních služeb Ostrava
+
+        button.c-nav__button(type="button") Menu
+
+      .c-header__body
+        h1.c-header__text Archiv ukončených projektů
+
+  #more.m-projects
+    .m-projects__loop
+      each instance in [1, 2, 3, 4, 6, 7]
+        .m-projects__item
+          h2.m-projects__name
+            faker-lorem-sentence/
+          .m-projects__content(data-find-external)
+            p
+              faker-lorem-paragraphs/
+            ul
+              each instance in [1, 2, 3, 4]
+                li
+                  faker-lorem-sentence/
+            p
+              faker-lorem-paragraphs/
+          button.m-projects__expand(type="button", data-toggle="project", data-target=".m-projects__item")
+            include ../static/svg/icon-ellipsis.svg
+            | Číst více
+
+    .m-projects__footer
+      mark.m-projects__pagination--active 2017
+      a.m-projects__pagination(href="javascript:") 2016
+      a.m-projects__pagination(href="javascript:") 2015
+
+  include _partials/_contact
+
+  include _partials/_tiles
+
+  include _partials/_partners
+
+  include _partials/_footer

@@ -1,11 +1,23 @@
 $c-color--150: hsb(48, 60, 100);
 $c-color--140: hsb(38, 65, 100);
 
-$c-color--200: hsb(211, 100, 100);
+$c-color--210: hsb(220, 030, 100);
+$c-color--200: hsb(220, 100, 100);
+$c-color--250: hsb(220, 066, 100);
+$c-color--290: hsb(220, 100, 060);
 
 $c-color--300: hsb(82, 8, 98);
 
-$c-grey--500: hsb(0, 0, 50);
+$c-color--400: hsb(157, 80, 75);
+
+$c-grey--950: hsb(220, 02, 96);
+$c-grey--800: hsb(220, 04, 90);
+$c-grey--750: hsb(220, 06, 80);
+$c-grey--600: hsb(220, 04, 60);
+$c-grey--500: hsb(220, 06, 50);
+$c-grey--200: hsb(220, 20, 35);
+$c-grey--100: hsb(220, 20, 20);
+$c-grey--000: hsb(220, 02, 10);
 
 $c-nrp: hsb(211, 100, 100);
 $c-rp:  hsb(130, 65, 85);
@@ -17,10 +29,17 @@ $c-sas: hsb(17, 50, 100);
 $c-sa:  hsb(77, 60, 85);
 $c-p:   hsb(347, 80, 75);
 
-$c-link:    black;
+$c-link:    $c-color--200;
 $c-visited: $c-link;
-$c-hover:   black;
+$c-hover:   $c-color--290;
 $c-active:  $c-hover;
 
 $c-select__bg:   black;
 $c-select__text: white;
+
+$c-phone:           hsb(190, 070, 085);
+$c-phone--hover:    hsb(190, 080, 095);
+$c-email:           hsb(205, 100, 100);
+$c-email--hover:    hsb(205, 070, 100);
+$c-facebook:        hsb(220, 066, 062);
+$c-facebook--hover: hsb(220, 066, 092);

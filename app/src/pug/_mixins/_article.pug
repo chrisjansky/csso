@@ -1,0 +1,27 @@
+mixin article(index)
+  .m-news__item
+    .m-news__holder
+      img.m-news__thumb(src="http://source.unsplash.com/random/1200x800?sig=" + index, alt="unsplash.it")
+    .m-news__body
+      h2.m-news__headline
+        faker-lorem-sentence/
+      time.m-news__date 16. 5. 2017
+      .m-news__content
+        p
+          faker-lorem-paragraphs/
+        ul
+          each instance in [1, 2, 3]
+            li
+              faker-lorem-sentence/
+        p
+          faker-lorem-paragraphs/
+
+        .m-gallery--slim
+          .m-gallery__list(data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+            each instance in [1, 2, 3, 4]
+              a.m-gallery__item(href="src/static/img/img-1.jpg", data-gallery)
+                img.m-gallery__thumb(src="http://source.unsplash.com/random/640x360?sig=" + instance, alt="Placeholder")
+
+      button.m-news__button(type="button", data-toggle="more", data-target=".m-news__item")
+        include ../../static/svg/icon-ellipsis.svg
+        | Číst více

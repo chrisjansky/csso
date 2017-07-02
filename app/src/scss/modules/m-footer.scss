@@ -20,6 +20,10 @@
     list-style-type: none;
     padding-left: 0;
 
+    a {
+      @include link-black(true);
+    }
+
     li:nth-child(2) {
       margin-bottom: 1.5em;
     }
@@ -62,10 +66,10 @@
 
     transition: box-shadow $duration--s;
 
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    box-shadow: $shadow--2;
 
     .m-footer__link:hover & {
-      box-shadow: 0 10px 20px 0 rgba(0,0,0,.1);
+      box-shadow: $shadow--1;
     }
 
     .m-footer__service--nrp & {color: $c-nrp; }
@@ -80,14 +84,7 @@
   }
 
   &__link {
-    &:link,
-    &:visited {
-    color: hsb(0, 0, 30);
-  }
-    &:hover,
-    &:active {
-      color: black;
-    }
+    @include link-dark;
   }
 
   &__note {
@@ -101,13 +98,12 @@
 
 [class^="m-footer__block--"],
 [class*=" m-footer__block--"] {
-  padding: 3em;
+  padding: 4em;
 
   flex-basis: 0;
   flex-grow: 1;
 }
 
 .m-footer__end {
-  margin-top: 5em;
-  @include a-wrap;
+  padding: 3em 1em;
 }

@@ -1,0 +1,10 @@
+include ../_mixins/_article
+
+#more.m-news
+  h1.m-news__title Novinky
+
+  .m-news__loop
+    each instance in [1, 2]
+      +article(instance)
+
+  a.m-news__cta(href="news-archive.html") Zobrazit všechny novinky

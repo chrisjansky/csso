@@ -1,0 +1,42 @@
+.m-footer
+  .m-footer__content
+    .m-footer__block--left
+      h4.m-footer__title Kontakt
+
+      ul.m-footer__contact
+        li Jahnova 867/12
+        li 709 00 Ostrava
+        li
+          span Tel 
+          | 599 455 121
+        li
+          span Fax 
+          | 599 455 115
+        li
+          span E-mail 
+          a(href="mailto:css@css-ostrava.cz") css@css-ostrava.cz
+        li
+          span Dat. schránka 
+          | t744u8y
+        li
+          span Číslo účtu 
+          | 249097426/0300 (ČSOB)
+        li
+          span IČ 
+          | 286 59 392
+
+      small.m-footer__note Zapsáno v OR u KOS v Ostravě, oddíl O, vložka 308
+
+    .m-footer__block--right
+      h4.m-footer__title Naše služby
+      ul.m-footer__services
+        each instance in services
+          li(class="m-footer__service--" + instance.id)
+            a.m-footer__link(href="javascript:")
+              abbr.m-footer__id= instance.id
+              != instance.name
+
+  .m-footer__end
+    a.c-logo(href="index.html")
+      img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
+      strong.c-logo__text &copy; Centrum sociálních služeb Ostrava, 2017

@@ -1,0 +1,21 @@
+.c-logo {
+  &:link,
+  &:visited {
+    color: currentColor;
+  }
+
+  &__image {
+    width: 2em;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: 1em;
+  }
+
+  &__text {
+    vertical-align: middle;
+
+    font-weight: $font__sans--regular;
+  }
+}

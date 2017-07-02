@@ -1,12 +1,6 @@
-var toggleObj = document.querySelectorAll('[data-toggle]');
+$.featherlightGallery.defaults.previousIcon = "←";
+$.featherlightGallery.defaults.nextIcon = "→";
 
-for (var i = 0; i < toggleObj.length; i++) {
-  toggleObj[i].onclick = function() {
-    var
-      toggleAttr = this.getAttribute('data-toggle'),
-      targetAttr = this.getAttribute('data-target'),
-      targetEl = targetAttr ? this.closest(targetAttr) : document.body;
-
-      targetEl.classList.toggle(toggleAttr + '--is-active');
-  }
-}
+require('./modules/csso-external')();
+require('./modules/csso-toggle')();
+require('./modules/csso-tabs')();

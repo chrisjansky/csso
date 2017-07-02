@@ -1,7 +1,7 @@
 extends _templates/_site
 
 block template-body
-  header.c-header
+  header.c-header--tall
     .c-header__wrap
       .c-header__top
         a.c-logo(href="index.html")
@@ -13,7 +13,7 @@ block template-body
       .c-header__body
         h1.c-header__text #[strong.c-header__strong Našim hlavním posláním] je zabezpečit poskytování kvalitní podpory a&nbsp;pomoci lidem při zvládání obtížných životních situací.
 
-        a.c-header__button(href="javascript::") Více informací
+        a.c-header__button(href="#more") Více informací
 
     .c-header__hero(style="background-image: url(src/static/img/img-1.jpg)")
 
@@ -37,28 +37,12 @@ block template-body
       h2.m-finder__title Hledáte konkrétní službu?
       button.m-finder__button(type="button", data-toggle="services") Zobrazit všechny služby
 
-  .m-news
-    h1.m-news__title Novinky
-
-    .m-news__loop
-      each instance in [1, 2]
-        .m-news__item
-          img.m-news__thumb(src="http://source.unsplash.com/random/600x400", alt="unsplash.it")
-          .m-news__body
-            .m-news__content
-              h2
-                faker-lorem-sentence/
-              time 16. 5. 2017
-              p
-                faker-lorem-paragraph/
-            button.m-news__button(type="button") Více
-
-    a.m-news__cta(href="archive.html") Zobrazit všechny novinky
+  include _partials/_news
 
   .m-longform
     .m-longform__wrap
-      .m-longform__body
-        h2 Kdo jsme
+      h2.m-longform__title Kdo jsme
+      .m-longform__content(data-find-external)        
         p Centrum sociálních služeb Ostrava, o.p.s., má dlouholetou historii. Vzniklo transformací organizace města Ostrava. Jeho hlavním posláním je zabezpečit poskytování kvalitní podpory a pomoci lidem při zvládání obtížných životních situací a na to navázat hledání dalších systémů podpory těmto lidem.
         p Nabízíme sociální a psychologické poradenství, přechodné ubytování, základní informační servis a další činnosti podle zákona č. 108/2006 Sb., o sociálních službách v rámci těchto zařízení:
         ul
@@ -72,27 +56,21 @@ block template-body
         p Navíc poskytujeme doplňkové činnosti vzdělávání vedoucích pracovníků, sociálních pracovníků, pracovníků v sociálních službách a pěstounů (dle novely zákona o SPOD), nově např. pedagogů i veřejnosti jako takové, vše v rámci: Sociální akademie – vzdělávací středisko.
         p Spolupracovali jsme se stavebním sociálním podnikem, který se zabýval drobnými stavebními a řemeslnými pracemi či nekvalifikovanými manuálními činnostmi se zaměstnáváním znevýhodněných osob na trhu práce: KASEA CZ, s.r.o.
         p Jsme správci osobních údajů, držiteli povolení ke zprostředkování zaměstnání, registrace sociálních služeb a pověření k výkonu sociálně – právní ochrany dětí.
+
       .m-longform__more
         button.m-longform__expand(type="button", data-toggle="longform") Více o nás
 
-  .m-contact
-    h3.m-contact__title Chcete se na cokoliv zeptat?
+  include _partials/_contact
 
-    .m-contact__body
-      .m-contact__item
-        span.m-contact__caps Telefon
-        strong.m-contact__strong +420 599 455 121
-
-      .m-contact__item
-        span.m-contact__caps E-mail
-        strong.m-contact__strong
-          a.m-contact__link(href="mailto:css@css-ostrava.cz") css@css-ostrava.cz
+  include _partials/_tiles
 
   .m-people
     h3.m-people__title Vedení organizace
     ul.m-people__list
       each person in people.main
         li.m-people__item
+          span.m-people__icon
+            include ../static/svg/icon-person.svg
           strong.m-people__name= person.name
           span.m-people__position= person.position
           ul.m-people__contact
@@ -100,62 +78,13 @@ block template-body
               li
                 abbr.m-people__abbr(title="Telefon") T
                 | 
-                = person.phone
+                a(href="tel:" + person.phone)= person.phone
             if person.email
               li
                 abbr.m-people__abbr(title="E-mail") E
                 | 
                 a(href="mailto:" + person.email)= person.email
 
-  .m-partners
-    .m-partners__body
-      each instance in [1, 2]
-        ul.m-partners__list
-          each instance in ["ostrava.png", "esf.png", "moap.png", "mpsv.png", "arcelor.png", "givt.png", "eu.png", "sad.png", "mpsv-rodina.png", "kure.png", "elvac.png", "jooble.png", "msk.png", "fond-nno.png", "urad-vlady.png", "drozd.png", "unicar.png", "apss.jpg", "okd.png", "opz.jpg"]
-            li.m-partners__item
-              a.m-partners__link(href="javascript::")
-                img.m-partners__image(src="src/static/img/partners/partner-" + instance, alt="Partner")
-    small.m-partners__note Děkujeme našim partnerům za podporu.
+  include _partials/_partners
 
-  .m-footer
-    .m-footer__content
-      .m-footer__block--left
-        h4.m-footer__title Kontakt
-
-        ul.m-footer__contact
-          li Jahnova 867/12
-          li 709 00 Ostrava
-          li
-            span Tel 
-            | 599 455 121
-          li
-            span Fax 
-            | 599 455 115
-          li
-            span E-mail 
-            a(href="mailto:css@css-ostrava.cz") css@css-ostrava.cz
-          li
-            span Dat. schránka 
-            | t744u8y
-          li
-            span Číslo účtu 
-            | 249097426/0300 (ČSOB)
-          li
-            span IČ 
-            | 286 59 392
-
-        small.m-footer__note Zapsáno v OR u KOS v Ostravě, oddíl O, vložka 308
-
-      .m-footer__block--right
-        h4.m-footer__title Naše služby
-        ul.m-footer__services
-          each instance in services
-            li(class="m-footer__service--" + instance.id)
-              a.m-footer__link(href="javascript:")
-                abbr.m-footer__id= instance.id
-                != instance.name
-
-    .m-footer__end
-      a.c-logo(href="index.html")
-        img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
-        strong.c-logo__text &copy; Centrum sociálních služeb Ostrava, 2017
+  include _partials/_footer

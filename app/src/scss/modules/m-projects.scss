@@ -1,0 +1,129 @@
+.m-projects {
+  @include a-wrap("top");
+
+  text-align: center;
+
+  &__title {
+    @include a-head--1;
+
+    margin-bottom: 1.5em;
+  }
+
+  &__item {
+    max-width: 50em;
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    &:not(:first-child) {
+      margin-top: 4em;
+    }
+  }
+
+  &__content {
+    text-align: left;
+
+    position: relative;
+
+    overflow: hidden;
+    max-height: 20em;
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 50%;
+
+      background-image: linear-gradient(to bottom, rgba(white, 0), rgba(white, 1));
+    }
+
+    .project--is-active & {
+      max-height: initial;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &__name {
+    @include a-head--2;
+
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+
+  &__cta {
+    display: inline-block;
+    margin-top: 5em;
+
+    @include button-large;
+    
+    background-color: $c-grey--950;
+
+    &:hover,
+    &:active {
+      background-color: $c-grey--800;
+    }
+  }
+
+  &__expand {
+    @include reset-button;
+    @include button-outline;
+
+    margin-top: 1.5em;
+
+    color: $c-link;
+
+    &:hover {
+      color: $c-hover;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    svg {
+      fill: currentColor;
+
+      vertical-align: middle;
+      margin-right: .75em;
+    }
+
+    .project--is-active & {
+      display: none;
+    }
+  }
+
+  &__footer {
+    margin-top: 5em;
+  }
+}
+
+[class^="m-projects__pagination"],
+[class*=" m-projects__pagination"] {
+  @include button-medium(true);
+
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.m-projects__pagination {
+  background-color: $c-grey--950;
+
+  &:hover,
+  &:active {
+    background-color: $c-grey--800;
+  }
+}
+
+.m-projects__pagination--active {
+  color: $c-grey--000;
+  background-color: $c-color--150;
+}

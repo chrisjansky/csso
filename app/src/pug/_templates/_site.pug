@@ -1,5 +1,6 @@
 block template-variables
-  - var page = {title: "CSSO", description: "Desc."}
+  - var page = {title: "CSSO", description: "Popis."}
+  - var theme = "default"
 
 doctype
 html.no-js(lang="cs")
@@ -21,12 +22,16 @@ html.no-js(lang="cs")
       <!-- endinject -->
       <!-- endbuild -->
 
-  body
+  body(class="theme--" + theme)
+
+    include ../_mixins/_article
 
     block template-body
       p Basic template.
 
     block template-foot
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+
       <!-- build:js src/js/site-min.js -->
       <!-- site:js -->
       <!-- endinject -->

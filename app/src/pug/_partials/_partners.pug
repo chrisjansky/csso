@@ -1,0 +1,9 @@
+.m-partners
+  .m-partners__body
+    each instance in [1, 2]
+      ul.m-partners__list
+        each instance in ["ostrava.png", "esf.png", "moap.png", "mpsv.png", "arcelor.png", "givt.png", "eu.png", "sad.png", "mpsv-rodina.png", "kure.png", "elvac.png", "jooble.png", "msk.png", "fond-nno.png", "urad-vlady.png", "drozd.png", "unicar.png", "apss.jpg", "okd.png", "opz.jpg"]
+          li.m-partners__item
+            a.m-partners__link(href="javascript::")
+              img.m-partners__image(src="src/static/img/partners/partner-" + instance, alt="Partner")
+  small.m-partners__note Děkujeme našim partnerům za podporu.

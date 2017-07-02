@@ -4,7 +4,7 @@
   text-align: center;
 
   &__title {
-    @include a-head--1;
+    @include a-head--2;
   }
 
   &__body {
@@ -12,19 +12,71 @@
     justify-content: space-around;
   }
 
-  &__caps {
-    display: block;
+  &__item--phone {
+    color: $c-phone;
 
-    font-size: .75em;
-    text-transform: uppercase;
-    letter-spacing: .125em;
+    a:link,
+    a:visited {
+      color: currentColor;
+    }
+    a:hover,
+    a:active {
+      color: $c-phone--hover;
+    }
+  }
 
-    color: $c-grey--500;
+  &__item--email {
+    color: $c-email;
+
+    a:link,
+    a:visited {
+      color: currentColor;
+    }
+    a:hover,
+    a:active {
+      color: $c-email--hover;
+    }
+  }
+
+  &__item--fb {
+    color: $c-facebook;
+
+    a:link,
+    a:visited {
+      color: currentColor;
+    }
+    a:hover,
+    a:active {
+      color: $c-facebook--hover;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    height: 1.5em;
 
     margin-bottom: 1em;
+
+    fill: currentColor;
   }
 
   &__strong {
-    @include a-head--1;
+    @include a-head--3;
+  }
+
+  &__note {
+    display: block;
+
+    max-width: 20em;
+
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: .75em;
+    color: $c-grey--500;
   }
 }

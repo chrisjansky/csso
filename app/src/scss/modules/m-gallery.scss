@@ -1,0 +1,28 @@
+.m-gallery {
+  @include a-wrap;
+
+  border-bottom: 1px solid #ddd;
+
+  text-align: center;
+
+  &__list {
+    @include clearfix;
+
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+
+  &__item {
+    display: block;
+
+    float: left;
+    width: 33.333%;
+    box-sizing: border-box;
+
+    padding: 1em;
+  }
+}
+
+.m-gallery--slim {
+  margin-top: 2em;
+}

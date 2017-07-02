@@ -1,0 +1,113 @@
+extends _templates/_site
+
+append template-variables
+  - var theme = "nrp"
+
+block template-body
+  header.c-header--tall
+    .c-header__wrap
+      .c-header__top
+        a.c-logo(href="index.html")
+          img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
+          strong.c-logo__text Centrum sociálních služeb Ostrava
+
+        button.c-nav__button(type="button") Menu
+
+      .c-header__body
+        h1.c-header__text #[strong.c-header__strong Náhradní rodinná péče] se stará o rozvíjení potenciálu náhradních rodin a&nbsp;využití jejich zdrojů tak, aby byli všichni členové spokojeni a dobře se jim spolu žilo.
+
+        a.c-header__button(href="#more") Více informací
+
+    .c-header__hero(style="background-image: url(src/static/img/img-2.jpg)")
+
+  include _partials/_news
+
+  .m-longform
+    .m-longform__wrap
+      h2.m-longform__title Podrobnosti služby
+      .m-longform__content(data-find-external)
+        p Jedná se o program zaměřující se na #[strong všestrannou podporu pěstounských rodin] v návaznosti na novelu zákona o sociálně-právní ochraně dětí, která nabyla účinnosti 1. 1. 2013
+        ul
+          li Od března 2013 jsme pověřeni k uzavírání dohod o výkonu pěstounské péče.
+          li Navazujeme na předchozí zkušenosti, kdy jsme provozovali zařízení pro výkon pěstounské péče.
+          li Služba je financována z rozpočtu České republiky, prostřednictvím Úřadu práce České republiky.
+        h1 Jak to u nás vypadá můžete vidět v krátkém videu
+        iframe(width="560" height="420" src="https://www.youtube.com/embed/cqYK43dV1FE" frameborder="0" allowfullscreen)
+        h1 Jaké je naše poslání a cíl?
+        p Našim posláním je rozvíjení potenciálu náhradních rodin a využití jejich zdrojů tak, aby byli všichni členové spokojeni a dobře se jim spolu žilo. Přitom klademe důraz na zájem dítěte.
+        p Našim cílem je fungující rodinné prostředí, které pro nás znamená:
+        ul
+          li spokojené dítě se zdravou identitou
+          li spolupracující a profesionální pěstoun
+          li začlenění rodiny a dítěte do společnosti
+          li stabilní rodinné zázemí
+        h2 Komu je služba určena?
+        ul
+          li dětem vyrůstajícím v pěstounské péči,
+          li pečujícím osobám/osobám v evidenci (pěstouni, poručníci a pěstouni na přechodnou dobu),
+          li každému dítěti, které požádá o ochranu života a jeho práv (dle § 8 ZOSPOD)
+        h3 Zásady naší činnosti
+        ul
+          li klademe důraz na zájem dítěte a jeho zapojování do rozhodování o věcech, které se ho týkají
+          li chceme být pro rodinu partnery
+          li vnímáme rodinu jako celek a každá je pro nás jedinečná
+        p Místem působnosti našeho střediska je celý Moravskoslezský kraj. Vyjíždíme k Vám z našich poboček v Ostravě, Karviné a Odrách.
+        p: a(href="javascript:") Rozhodnutí krajského úřadu o pověření k vykonávání sociálně-právní ochrany dětí
+        p Jsme členy Asociace #[a(href="http://www.google.com") Dítě a rodina].
+        img(src="src/temp/content/nrp-sample-logo.png", alt="Dítě a rodina logo")
+        p: a(href="javascript:") Přečtěte si, jak postupujeme při řešení mimořádných situací.
+
+      .m-longform__more
+        button.m-longform__expand(type="button", data-toggle="longform") Více informací
+
+      h2.m-longform__subtitle Zajímá Vás více?
+      .c-tabs(data-tabs)
+        .c-tabs__nav
+          button.c-tabs__link(data-tabs-link="#tab-1") Jak zažádat o službu
+          button.c-tabs__link(data-tabs-link="#tab-2") Podmínky služby
+        #tab-1.c-tabs__item(data-tab)
+          p
+            faker-lorem-paragraphs/
+        #tab-2.c-tabs__item(data-tab)
+          p
+            faker-lorem-paragraphs/
+
+  .m-gallery
+    h2.m-gallery__title Fotogalerie
+    .m-gallery__list(data-featherlight-gallery, data-featherlight-filter="[data-gallery]")
+      each instance in [1, 2, 3, 4]
+        a.m-gallery__item(href="src/static/img/img-1.jpg", data-gallery)
+          img.m-gallery__thumb(src="http://source.unsplash.com/random/640x360?sig=" + instance, alt="Placeholder")
+
+  include _partials/_contact
+
+  - var tilesExpanded = true
+  include _partials/_tiles
+
+  .m-people
+    h3.m-people__title Pracovníci střediska
+    ul.m-people__list
+      each person in people.nrp
+        li.m-people__item
+          span.m-people__icon
+            include ../static/svg/icon-person.svg
+          strong.m-people__name= person.name
+          span.m-people__position= person.position
+          ul.m-people__contact
+            if person.phone
+              li
+                abbr.m-people__abbr(title="Telefon") T
+                | 
+                a(href="tel:" + person.phone)= person.phone
+            if person.email
+              li
+                abbr.m-people__abbr(title="E-mail") E
+                | 
+                a(href="mailto:" + person.email)= person.email
+    .m-people__footer
+      p Pro více informací o projektu Zvyšování kvality na středisku NRP (reg.č. projekt č. CZ.03.2.63/0.0/0.0/16_065/0003843) &mdash; financovaného z Evropského sociálního fondu &mdash; se obraťte na metodičku #[strong Bc. Barboru Bednářovou].
+      p Odborné pracovníky lze kontaktovat přes klíčové pracovníky.
+
+  include _partials/_partners
+
+  include _partials/_footer
