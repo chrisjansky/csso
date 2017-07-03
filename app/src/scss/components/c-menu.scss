@@ -1,0 +1,108 @@
+.menu--is-active {
+  overflow-y: hidden;
+}
+
+.c-menu {
+  &__close {
+    position: absolute;
+    top: 1.5em;
+    right: 1em;
+
+    @include reset-button;
+    background-color: transparent;
+    padding: 1em;
+    border: 0;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+
+    svg {
+      width: 1.5em;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 2em;
+
+    background-color: white;
+
+    transform: translateX(100%);
+    transition: transform $duration--b;
+
+    .menu--is-active & {
+      transform: translateX(0);
+    }
+  }
+
+  &__list {
+    margin-top: 0;
+    padding-left: 0;
+
+    list-style-type: none;
+    line-height: 2;
+  }
+
+  &__item {
+    font-size: 1.25em;
+
+    padding-left: 3.5rem;
+  }
+
+  &__link {
+    @include link-black;
+
+    svg {
+      width: 1.5rem;
+
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+
+      vertical-align: middle;
+
+      margin-right: 2rem;
+    }
+  }
+
+  &__overlay {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($c-grey--000, .95);
+
+    cursor: w-resize;
+
+    animation: $duration--b forwards dim;
+
+    .menu--is-active & {
+      display: block;
+    }
+  }
+}
+
+.item--is-external {
+  margin-bottom: 1em;
+  padding-left: 0;
+}

@@ -4,3 +4,4 @@ $.featherlightGallery.defaults.nextIcon = "→";
 require('./modules/csso-external')();
 require('./modules/csso-toggle')();
 require('./modules/csso-tabs')();
+require('./modules/csso-menu')();

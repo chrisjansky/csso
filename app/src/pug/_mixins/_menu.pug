@@ -1,0 +1,84 @@
+-
+  var linksObj = {
+    "homepage": [
+      {
+        "href": "#services",
+        "title": "Naše služby"
+      },
+      {
+        "href": "#news",
+        "title": "Novinky"
+      },
+      {
+        "href": "#about",
+        "title": "Kdo jsme"
+      },
+      {
+        "href": "#contact",
+        "title": "Kontakt"
+      }
+    ],
+    "service": [
+      {
+        "href": "index.html",
+        "title": "Zpět na úvod",
+        "external": true
+      },
+      {
+        "href": "#news",
+        "title": "Novinky"
+      },
+      {
+        "href": "#about",
+        "title": "Podrobnosti"
+      },
+      {
+        "href": "#contact",
+        "title": "Kontakt"
+      }
+    ],
+    "subpage": [
+      {
+        "href": "index.html",
+        "title": "Zpět na úvod",
+        "external": true
+      }
+    ]
+  }
+
+mixin menu(type)
+  - var links
+  case type
+    when "service"
+      - links = linksObj.service
+    when "homepage"
+      - links = linksObj.homepage
+    default
+      - links = linksObj.subpage
+
+  nav.c-menu
+    .c-menu__content
+      button.c-menu__close(type="button", data-toggle="menu")
+        svg(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg")
+          path(d="M1,1 L23,23")
+          path(d="M1,23 L23,1")
+      .c-menu__top
+        ul.c-menu__list
+          each instance in links
+            li.c-menu__item(class= instance.external ? "item--is-external" : null)
+              a.c-menu__link(href=instance.href, data-menu-link=!instance.external)
+                if instance.external
+                  svg(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg")
+                    path(d="M12,1 L1,12 L12,23")
+                    path(d="M1,12 L23,12")
+                = instance.title
+
+      .c-menu__bottom
+        ul.m-footer__services
+          each instance in services
+            li(class="m-footer__service--" + instance.id)
+              a.m-footer__link(href="javascript:")
+                abbr.m-footer__id= instance.id
+                != instance.name
+
+    span.c-menu__overlay(data-toggle="menu")
