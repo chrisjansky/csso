@@ -48,9 +48,11 @@
 
 mixin menu(type)
   - var links
+  - var service
   case type
     when "service"
       - links = linksObj.service
+      - service = "nrp"
     when "homepage"
       - links = linksObj.homepage
     default
@@ -74,11 +76,16 @@ mixin menu(type)
                 = instance.title
 
       .c-menu__bottom
-        ul.m-footer__services
+        ul.c-services
           each instance in services
-            li(class="m-footer__service--" + instance.id)
-              a.m-footer__link(href="javascript:")
-                abbr.m-footer__id= instance.id
-                != instance.name
+            li(class="c-services__item--" + instance.id)
+              if service == instance.id
+                mark.c-services__active
+                  abbr.c-services__id= instance.id
+                  != instance.name
+              else
+                a.c-services__link(href="service-nrp.html")
+                  abbr.c-services__id= instance.id
+                  != instance.name
 
     span.c-menu__overlay(data-toggle="menu")
