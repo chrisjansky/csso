@@ -1,0 +1,39 @@
+.c-hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+
+  background-color: $c-color--150;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2em;
+  }
+
+  &__button {
+    @include reset-button;
+
+    border: 0;
+    border-radius: $radius--l;
+
+    padding: .5em 1em;
+
+    font-weight: $font__sans--semibold;
+    font-size: .75em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+
+    color: currentColor;
+    background-color: white;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
