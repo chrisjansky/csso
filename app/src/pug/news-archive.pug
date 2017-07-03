@@ -11,10 +11,12 @@ block template-body
           img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
           strong.c-logo__text Centrum sociálních služeb Ostrava
 
-        button.c-nav__button(type="button") Menu
+        button.c-nav__button(type="button", data-toggle="menu") Menu
 
       .c-header__body
         h1.c-header__text Archiv novinek
+
+  +menu("subpage")
 
   .s-archive__news.m-news
     .m-news__loop

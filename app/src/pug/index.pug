@@ -8,16 +8,18 @@ block template-body
           img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
           strong.c-logo__text Centrum sociálních služeb Ostrava
 
-        button.c-nav__button(type="button") Menu
+        button.c-nav__button(type="button", data-toggle="menu") Menu
 
       .c-header__body
         h1.c-header__text #[strong.c-header__strong Našim hlavním posláním] je zabezpečit poskytování kvalitní podpory a&nbsp;pomoci lidem při zvládání obtížných životních situací.
 
-        a.c-header__button(href="#more") Více informací
+        a.c-header__button(href="#news") Více informací
 
     .c-header__hero(style="background-image: url(src/static/img/img-1.jpg)")
 
-  .m-finder
+  +menu("homepage")
+
+  #services.m-finder
     h2.m-finder__title Vyberte oblast, s&nbsp;kterou Vám můžeme pomoci
 
     ul.m-finder__categories
@@ -39,7 +41,7 @@ block template-body
 
   include _partials/_news
 
-  .m-longform
+  #about.m-longform
     .m-longform__wrap
       h2.m-longform__title Kdo jsme
       .m-longform__content(data-find-external)        

@@ -11,7 +11,7 @@ block template-body
           img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
           strong.c-logo__text Centrum sociálních služeb Ostrava
 
-        button.c-nav__button(type="button") Menu
+        button.c-nav__button(type="button", data-toggle="menu") Menu
 
       .c-header__body
         h1.c-header__text #[strong.c-header__strong Projekty] dále poskytující podporu lidem a&nbsp;napomáhající k&nbsp;jejich seberozvoji.
@@ -19,6 +19,8 @@ block template-body
         a.c-header__button(href="#more") Více informací
 
     .c-header__hero(style="background-image: url(src/static/img/img-1.jpg)")
+
+  +menu("subpage")
 
   #more.m-projects
     h1.m-projects__title Probíhající projekty

@@ -11,14 +11,16 @@ block template-body
           img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
           strong.c-logo__text Centrum sociálních služeb Ostrava
 
-        button.c-nav__button(type="button") Menu
+        button.c-nav__button(type="button", data-toggle="menu") Menu
 
       .c-header__body
         h1.c-header__text #[strong.c-header__strong Náhradní rodinná péče] se stará o rozvíjení potenciálu náhradních rodin a&nbsp;využití jejich zdrojů tak, aby byli všichni členové spokojeni a dobře se jim spolu žilo.
 
-        a.c-header__button(href="#more") Více informací
+        a.c-header__button(href="#news") Více informací
 
     .c-header__hero(style="background-image: url(src/static/img/img-2.jpg)")
+
+  +menu("service")
 
   include _partials/_news
 
