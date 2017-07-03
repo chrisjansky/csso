@@ -32,8 +32,7 @@
   },
   "move": [
     "app/*.html",
-    "app/src/static/fonts/*",
-    "app/src/static/img/*",
+    "app/src/static/img/**/*",
     "app/src/static/temp/*",
     "app/src/static/svg/*.svg"
   ],
