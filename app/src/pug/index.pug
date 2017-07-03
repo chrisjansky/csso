@@ -3,13 +3,7 @@ extends _templates/_site
 block template-body
   header.c-header--tall
     .c-header__wrap
-      .c-hud
-        .c-hud__wrap
-          a.c-logo(href="index.html")
-            img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
-            strong.c-logo__text Centrum sociálních služeb Ostrava
-
-          button.c-hud__button(type="button", data-toggle="menu") Menu
+      +hud
 
       .c-header__body
         h1.c-header__text #[strong.c-header__strong Našim hlavním posláním] je zabezpečit poskytování kvalitní podpory a&nbsp;pomoci lidem při zvládání obtížných životních situací.
