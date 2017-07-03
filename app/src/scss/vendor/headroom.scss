@@ -1,0 +1,15 @@
+.headroom {
+  transition: transform $duration--b, background-color $duration--b, padding $duration--b;
+
+  &.headroom--not-top {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    color: black;
+    background-color: $c-color--150;
+  }
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}

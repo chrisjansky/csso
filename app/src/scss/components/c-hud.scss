@@ -5,14 +5,16 @@
   width: 100%;
   z-index: 500;
 
-  background-color: $c-color--150;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   &__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 
   &__button {

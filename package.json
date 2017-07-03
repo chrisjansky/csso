@@ -47,6 +47,7 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "featherlight": "^1.7.6",
+    "headroom.js": "^0.9.3",
     "normalize.css": "^7.0.0"
   }
 }

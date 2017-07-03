@@ -47,6 +47,7 @@
 
       "node_modules/featherlight/src/featherlight.js",
       "node_modules/featherlight/src/featherlight.gallery.js",
+      "node_modules/headroom.js/dist/headroom.js",
 
       "app/src/temp/bundle.js"
     ],
