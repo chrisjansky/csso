@@ -30,12 +30,17 @@ mixin footer(page)
 
       .m-footer__block--right
         h4.m-footer__title Naše služby
-        ul.m-footer__services
+        ul.c-services
           each instance in services
-            li(class="m-footer__service--" + instance.id)
-              a.m-footer__link(href="javascript:")
-                abbr.m-footer__id= instance.id
-                != instance.name
+            li(class="c-services__item--" + instance.id)
+              if page == instance.id
+                mark.c-services__active
+                  abbr.c-services__id= instance.id
+                  != instance.name
+              else
+                a(href="service-nrp.html").c-services__link
+                  abbr.c-services__id= instance.id
+                  != instance.name
 
     .m-footer__end
       a.c-logo(href="index.html")

@@ -10,6 +10,8 @@
 
   &__title {
     margin-top: 0;
+
+    @include a-head--3;
   }
 
   &__block--left {
@@ -33,58 +35,6 @@
 
       min-width: 8em;
     }
-  }
-
-  &__services {
-    list-style-type: none;
-    padding-left: 0;
-
-    li:not(:first-child) {
-      margin-top: .25em;
-    }
-  }
-
-  &__id {
-    display: inline-block;
-    vertical-align: middle;
-
-    width: 4em;
-    height: 4em;
-
-    margin-right: 3em;
-
-    color: currentColor;
-
-    font-size: .5em;
-    font-weight: $font__sans--semibold;
-    line-height: 4em;
-    letter-spacing: .125em;
-    text-transform: uppercase;
-    text-align: center;
-    
-    border-radius: 50%;
-
-    transition: box-shadow $duration--s;
-
-    box-shadow: $shadow--2;
-
-    .m-footer__link:hover & {
-      box-shadow: $shadow--1;
-    }
-
-    .m-footer__service--nrp & {color: $c-nrp; }
-    .m-footer__service--rp &  {color: $c-rp; }
-    .m-footer__service--ps &  {color: $c-ps; }
-    .m-footer__service--dpc & {color: $c-dpc; }
-    .m-footer__service--adm & {color: $c-adm; }
-    .m-footer__service--dmd & {color: $c-dmd; }
-    .m-footer__service--sas & {color: $c-sas; }
-    .m-footer__service--sa &  {color: $c-sa; }
-    .m-footer__service--p &   {color: $c-p; }
-  }
-
-  &__link {
-    @include link-dark;
   }
 
   &__note {
