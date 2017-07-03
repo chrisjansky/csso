@@ -62,6 +62,22 @@
     }
   }
 
+  &__back {
+    display: inline-block;
+    
+    svg {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1;
+
+      width: 1.5em;
+
+      vertical-align: middle;
+
+      margin-right: 1em;
+    }
+  }
+
   &__hero {
     position: relative;
     z-index: 100;
