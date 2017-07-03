@@ -25,7 +25,7 @@ block template-body
 
     .s-results.m-finder__results
       each instance in services
-        a(href="javascript::" class="m-finder__service--" + instance.id)
+        a(href="service-nrp.html" class="m-finder__service--" + instance.id)
           abbr(title=instance.name).m-finder__id= instance.id
           strong.m-finder__name!= instance.name
           span.m-finder__hint Více o službě &rarr;
