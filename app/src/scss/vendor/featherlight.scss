@@ -34,7 +34,11 @@
     background-color: transparent;
 
     &:hover {
-      color: black;
+      color: $c-color--150;
+    }
+
+    &:focus {
+      outline: 0;
     }
   }
 }
@@ -71,6 +75,9 @@ Featherlight Gallery
   }
 
   &:hover {
+    span {
+      color: $c-color--150;
+    }
     background-color: transparent;
   }
 }
