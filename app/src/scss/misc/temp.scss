@@ -1,0 +1,7 @@
+.anchor--is-external {
+  &:after {
+    content: url("../static/svg/icon-external-small.svg");
+
+    margin-left: .25em;
+  }
+}
