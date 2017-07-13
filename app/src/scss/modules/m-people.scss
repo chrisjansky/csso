@@ -45,16 +45,16 @@
   }
 
   &__item:nth-child(2n) &__icon {
-    color: $c-nrp;
+    color: $c-nrp--500;
   }
   &__item:nth-child(3n) &__icon {
-    color: $c-adm;
+    color: $c-adm--500;
   }
   &__item:nth-child(4n) &__icon {
-    color: $c-sa;
+    color: $c-sa--500;
   }
   &__item:nth-child(6n) &__icon {
-    color: $c-ps;
+    color: $c-ps--500;
   }
 
   &__name {

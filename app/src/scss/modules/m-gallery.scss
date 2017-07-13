@@ -1,7 +1,7 @@
 .m-gallery {
   @include a-wrap;
 
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $c-grey--800;
 
   text-align: center;
 

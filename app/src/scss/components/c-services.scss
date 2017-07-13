@@ -54,23 +54,23 @@
 }
 
 .c-services__item {
-  &--nrp .c-services__link .c-services__id {color: $c-nrp; }
-  &--rp  .c-services__link .c-services__id {color: $c-rp; }
-  &--ps  .c-services__link .c-services__id {color: $c-ps; }
-  &--dpc .c-services__link .c-services__id {color: $c-dpc; }
-  &--adm .c-services__link .c-services__id {color: $c-adm; }
-  &--dmd .c-services__link .c-services__id {color: $c-dmd; }
-  &--sas .c-services__link .c-services__id {color: $c-sas; }
-  &--sa  .c-services__link .c-services__id {color: $c-sa; }
-  &--p   .c-services__link .c-services__id {color: $c-p; }
+  &--nrp .c-services__link .c-services__id {color: $c-nrp--500; }
+  &--rp  .c-services__link .c-services__id {color: $c-rp--500; }
+  &--ps  .c-services__link .c-services__id {color: $c-ps--500; }
+  &--dpc .c-services__link .c-services__id {color: $c-dpc--500; }
+  &--adm .c-services__link .c-services__id {color: $c-adm--500; }
+  &--dmd .c-services__link .c-services__id {color: $c-dmd--500; }
+  &--sas .c-services__link .c-services__id {color: $c-sas--500; }
+  &--sa  .c-services__link .c-services__id {color: $c-sa--500; }
+  &--p   .c-services__link .c-services__id {color: $c-p--500; }
 
-  &--nrp .c-services__active .c-services__id {background-color: $c-nrp; }
-  &--rp  .c-services__active .c-services__id {background-color: $c-rp; }
-  &--ps  .c-services__active .c-services__id {background-color: $c-ps; }
-  &--dpc .c-services__active .c-services__id {background-color: $c-dpc; }
-  &--adm .c-services__active .c-services__id {background-color: $c-adm; }
-  &--dmd .c-services__active .c-services__id {background-color: $c-dmd; }
-  &--sas .c-services__active .c-services__id {background-color: $c-sas; }
-  &--sa  .c-services__active .c-services__id {background-color: $c-sa; }
-  &--p   .c-services__active .c-services__id {background-color: $c-p; }
+  &--nrp .c-services__active .c-services__id {background-color: $c-nrp--500; }
+  &--rp  .c-services__active .c-services__id {background-color: $c-rp--500; }
+  &--ps  .c-services__active .c-services__id {background-color: $c-ps--500; }
+  &--dpc .c-services__active .c-services__id {background-color: $c-dpc--500; }
+  &--adm .c-services__active .c-services__id {background-color: $c-adm--500; }
+  &--dmd .c-services__active .c-services__id {background-color: $c-dmd--500; }
+  &--sas .c-services__active .c-services__id {background-color: $c-sas--500; }
+  &--sa  .c-services__active .c-services__id {background-color: $c-sa--500; }
+  &--p   .c-services__active .c-services__id {background-color: $c-p--500; }
 }

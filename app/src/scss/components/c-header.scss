@@ -54,11 +54,14 @@
 
     @include button-large;
 
-    background-color: hsb(258, 50, 80);
-
     &:link,
     &:visited {
       color: white;
+      background-color: $c-rp--500;
+    }
+    &:hover,
+    &:active {
+      background-color: darken($c-rp--500, 15%);
     }
   }
 

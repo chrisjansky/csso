@@ -74,15 +74,15 @@
     border-radius: 50%;
     box-shadow: $shadow--1;
 
-    .m-finder__service--nrp & {color: $c-nrp; }
-    .m-finder__service--rp &  {color: $c-rp; }
-    .m-finder__service--ps &  {color: $c-ps; }
-    .m-finder__service--dpc & {color: $c-dpc; }
-    .m-finder__service--adm & {color: $c-adm; }
-    .m-finder__service--dmd & {color: $c-dmd; }
-    .m-finder__service--sas & {color: $c-sas; }
-    .m-finder__service--sa &  {color: $c-sa; }
-    .m-finder__service--p &   {color: $c-p; }
+    .m-finder__service--nrp & {color: $c-nrp--500; }
+    .m-finder__service--rp &  {color: $c-rp--500; }
+    .m-finder__service--ps &  {color: $c-ps--500; }
+    .m-finder__service--dpc & {color: $c-dpc--500; }
+    .m-finder__service--adm & {color: $c-adm--500; }
+    .m-finder__service--dmd & {color: $c-dmd--500; }
+    .m-finder__service--sas & {color: $c-sas--500; }
+    .m-finder__service--sa &  {color: $c-sa--500; }
+    .m-finder__service--p &   {color: $c-p--500; }
   }
 
   /* Stupid normalize.css hack */
