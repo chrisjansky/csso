@@ -17,24 +17,3 @@
 .s-archive__news {
   @include a-wrap;
 }
-
-/* Theming */
-.theme--nrp {
-  .c-header--tall {
-    color: hsb(233, 100, 60);
-    background-color: hsb(261, 4, 100);
-  }
-
-  .m-longform {
-    background-color: hsb(181, 10, 96);
-  }
-  .m-longform__content:after {
-    background-image: linear-gradient(to bottom, rgba(hsb(181, 10, 96), 0), rgba(hsb(181, 10, 96), 1));
-  }
-}
-
-.theme--news {
-  .c-header--slim {
-    background-color: hsb(165, 20, 94);
-  }
-}

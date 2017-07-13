@@ -1,0 +1,20 @@
+extends _templates/_site
+
+block template-body
+  each item in services
+    if item.id == "sa"
+    else
+      div(class="theme--" + item.id)
+        header.c-header--tall
+          .c-header__wrap
+            .c-header__body
+              h1.c-header__text 
+                strong!= item.name
+                | 
+                != item.description
+
+              a.c-header__button(href="javascript:") Více informací
+
+          .c-header__hero(style="background-image: url(src/static/img/services/service-" + item.id + ".jpg)")
+
+        hr(style="margin: 25vmin 0; border: 0;")
