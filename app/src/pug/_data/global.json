@@ -28,39 +28,48 @@
   "services": [
     {
       "id": "nrp",
-      "name": "Náhradní rodinná péče"
+      "name": "Náhradní rodinná péče",
+      "description": "se stará o rozvíjení potenciálu náhradních rodin a&nbsp;využití jejich zdrojů tak, aby byli všichni členové spokojeni a&nbsp;dobře se jim spolu žilo."
     },
     {
       "id": "rp",
-      "name": "Rodinná poradna"
+      "name": "Rodinná poradna",
+      "description": "poskytuje sociální a&nbsp;psychologické poradenství, terapeutickou pomoc související s mezilidskými vztahy, výchovou dětí a&nbsp;posílením psychického stavu jednotlivce."
     },
     {
       "id": "ps",
-      "name": "Pečovatelská služba"
+      "name": "Pečovatelská služba",
+      "description": "je terénní služba sociální péče zaměřená na podporu a&nbsp;pomoc seniorům a&nbsp;zdravotně postiženým občanům obcí."
     },
     {
       "id": "dpc",
-      "name": "Sociální služba Dům na půl cesty"
+      "name": "Sociální služba Dům na půl cesty",
+      "description": "poskytuje ohroženým mladým dospělým ubytování na přechodnou dobu a&nbsp;podporu při vstupu do běžného a&nbsp;samostatného života."
     },
     {
       "id": "adm",
-      "name": "Azylový dům pro muže"
+      "name": "Azylový dům pro muže",
+      "description": "nabízí podporu a&nbsp;možnost přechodného ubytování mužům, kteří se ocitli v&nbsp;nepříznivé sociální situaci spojené se ztrátou bydlení."
     },
     {
       "id": "dmd",
-      "name": "Azylový dům pro matky s&nbsp;dětmi"
+      "name": "Azylový dům pro matky s&nbsp;dětmi",
+      "description": "poskytuje přechodné ubytování, podmínky pro přípravu stravy, pomoc uživatelkám a&nbsp;jejich dětem s hledáním následného bydlení a&nbsp;východisek z nepříznivé sociální situace."
     },
     {
       "id": "sas",
-      "name": "Sociálně aktivizační služba pro rodiny s&nbsp;dětmi"
+      "name": "Sociálně aktivizační služba pro rodiny s&nbsp;dětmi",
+      "description": "poskytuje podporu rodinám s dětmi v&nbsp;obtížné sociální situaci, u kterých je ohrožen vývoj dětí nebo fungování rodiny."
     },
     {
       "id": "sa",
-      "name": "Sociální akademie"
+      "name": "Sociální akademie",
+      "description": "poskytuje kvalitní vzdělávání v&nbsp;sociální oblasti — pro pracovníky, pěstouny i veřejnost."
     },
     {
       "id": "p",
-      "name": "Projekty"
+      "name": "Projekty",
+      "description": "dále poskytující podporu lidem a&nbsp;napomáhající k&nbsp;jejich seberozvoji."
     }
   ],
   "people": {
