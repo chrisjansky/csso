@@ -10,6 +10,7 @@
 
   &__subtitle {
     @include a-head--3;
+    
     margin-top: 4em;
 
     text-align: center;
@@ -47,41 +48,6 @@
 
   overflow: hidden;
   max-height: 30em;
-
-  h1 {
-    @include a-head--2;
-
-    margin-top: 2em;
-    margin-bottom: 1em;
-
-    text-align: center;
-  }
-
-  h2 {
-    @include a-head--3;
-
-    margin-top: 1.5em;
-    margin-bottom: .75em;
-  }
-
-  h3 {
-    @include a-head--4;
-
-    margin-top: 2em;
-  }
-
-  a {
-    border-bottom: 1px solid;
-
-    &:link,
-    &:visited {
-      border-bottom-color: rgba($c-link, .25);
-    }
-    &:hover,
-    &:active {
-      border-bottom-color: rgba($c-hover, .5);
-    }
-  }
 
   &:after {
     content: "";

@@ -22,7 +22,7 @@ block template-body
   #about.m-longform
     .m-longform__wrap
       h2.m-longform__title Podrobnosti služby
-      .m-longform__content(data-find-external)
+      .c-editor.m-longform__content(data-find-external)
         p Jedná se o program zaměřující se na #[strong všestrannou podporu pěstounských rodin] v návaznosti na novelu zákona o sociálně-právní ochraně dětí, která nabyla účinnosti 1. 1. 2013
         ul
           li Od března 2013 jsme pověřeni k uzavírání dohod o výkonu pěstounské péče.
@@ -62,12 +62,10 @@ block template-body
         .c-tabs__nav
           button.c-tabs__link(data-tabs-link="#tab-1") Jak zažádat o službu
           button.c-tabs__link(data-tabs-link="#tab-2") Podmínky služby
-        #tab-1.c-tabs__item(data-tab)
-          p
-            faker-lorem-paragraphs/
-        #tab-2.c-tabs__item(data-tab)
-          p
-            faker-lorem-paragraphs/
+        each tab in [1, 2]
+          .c-editor.c-tabs__item(id="tab-" + tab, data-tab)
+            p
+              faker-lorem-paragraphs/
 
   .m-gallery
     h2.m-gallery__title Fotogalerie
