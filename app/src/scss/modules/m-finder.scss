@@ -19,7 +19,27 @@
     margin-top: 4em;
   }
 
+  &__filter {
+    @include reset-button;
+
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    transition: color $duration--s;
+
+    &:hover {
+      color: $c-link;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
   &__thumb {
+    position: relative;
+
     display: block;
 
     width: 7em;
@@ -29,6 +49,55 @@
     border-radius: 50%;
 
     background-size: cover;
+
+    &:before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: $c-grey--000;
+      border-radius: 50%;
+
+      opacity: 0;
+
+      transition: opacity $duration--s;
+    }
+
+    &:after {
+      content: url("../static/svg/icon-check.svg");
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%) scale(1.5);
+
+      transition: opacity $duration--s, transform $duration--s;
+      opacity: 0;
+    }
+
+    .m-finder__filter:hover &:before {
+      opacity: .25;
+    }
+
+    .filter--is-active & {
+      &:before {
+        opacity: .5;
+      }
+
+      &:after {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    .filter--is-active:hover &:after {
+      content: url("../static/svg/icon-close.svg");
+    }
   }
 
   &__results {

@@ -18,10 +18,11 @@ block template-body
     h2.m-finder__title Vyberte oblast, s&nbsp;kterou Vám můžeme pomoci
 
     ul.m-finder__categories
-      each instance in categories
+      each instance, index in categories
         li.m-finder__cat
-          span.m-finder__thumb(style="background-image: url(src/static/img/cats/" + instance.thumb + ")")
-          = instance.name
+          button.m-finder__filter(type="button", class=index == 0 ? "filter--is-active" : null)
+            span.m-finder__thumb(style="background-image: url(src/static/img/cats/" + instance.thumb + ")")
+            = instance.name
 
     .s-results.m-finder__results
       each instance in services
