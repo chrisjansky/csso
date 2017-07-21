@@ -45,14 +45,10 @@
   }
 
   &__input {
-    line-height: 1;
-
     padding: .75em 1em;
   }
 
   &__textarea {
-    line-height: inherit;
-
     padding: 1em;
   }
 
@@ -63,6 +59,7 @@
     appearance: none;
 
     font-family: inherit;
+    line-height: inherit;
 
     margin: .5em;
     border: 1px solid $c-grey--750;
