@@ -1,16 +1,25 @@
 .c-logo {
+  display: block;
+
+  position: relative;
+
+  padding-left: 2.5em;
+
+  @include breakpoint(max-width $bp__tablet - 1) {
+    font-size: .75em;
+  }
+  
   &:link,
   &:visited {
     color: currentColor;
   }
 
   &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+
     width: 2em;
-
-    display: inline-block;
-    vertical-align: middle;
-
-    margin-right: 1em;
   }
 
   &__text {

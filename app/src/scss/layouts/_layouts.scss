@@ -1,17 +1,39 @@
 @mixin a-wrap($padded: false) {
-  padding: 5em;
-
-  @if $padded == "both" {
-    padding-top: 7.5em;
-    padding-bottom: 7.5em;
-  } @else if $padded == "top" {
-    padding-top: 7.5em;
-  }
-
   margin-left: auto;
   margin-right: auto;
 
   @include reset-children;
+
+  padding: 1.25em;
+
+  @if $padded == "both" {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  } @else if $padded == "top" {
+    padding-top: 2.5em;
+  }
+
+  @include breakpoint((min-width $bp__tablet) (max-width $bp__desktop - 1)) {
+    padding: 2em;
+
+    @if $padded == "both" {
+      padding-top: 4em;
+      padding-bottom: 4em;
+    } @else if $padded == "top" {
+      padding-top: 4em;
+    } 
+  }
+
+  @include breakpoint($bp__desktop) {
+    padding: 5em;
+
+    @if $padded == "both" {
+      padding-top: 7.5em;
+      padding-bottom: 7.5em;
+    } @else if $padded == "top" {
+      padding-top: 7.5em;
+    }
+  }
 }
 
 .l-wrap {

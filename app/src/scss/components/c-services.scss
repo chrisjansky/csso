@@ -6,17 +6,16 @@
   margin-bottom: 0;
 
   li:not(:first-child) {
-    margin-top: .25em;
+    margin-top: .75em;
   }
 
   &__id {
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     width: 4em;
     height: 4em;
-
-    margin-right: 3em;
 
     color: currentColor;
 
@@ -43,10 +42,20 @@
   }
 
   &__link {
+    display: block;
+    position: relative;
+
+    padding-left: 3em;
+
     @include link-dark;
   }
 
   &__active {
+    display: block;
+    position: relative;
+
+    padding-left: 3em;
+
     background-color: transparent;
 
     font-weight: $font__sans--bold;    

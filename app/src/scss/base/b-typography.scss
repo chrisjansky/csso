@@ -1,20 +1,38 @@
 @mixin a-head--1 {
   font-family: $font__narrow;
   font-weight: $font__sans--extrabold;
-  font-size: 2.75em;
+  font-size: 2em;
   line-height: $leading--s;
+
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+
+  @include breakpoint($bp__laptop) {
+    font-size: 2.75em;
+  }
 }
 
 @mixin a-head--2 {
   font-family: $font__narrow;
   font-weight: $font__sans--light;
-  font-size: 2.25em;
+  font-size: 1.5em;
+
+  margin-top: .75em;
+  margin-bottom: .75em;
+
+  @include breakpoint($bp__laptop) {
+    font-size: 2.25em;
+  }
 }
 
 @mixin a-head--3 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-family: $font__narrow;
   font-weight: $font__sans--regular;
+
+  @include breakpoint($bp__laptop) {
+    font-size: 1.5em;
+  }
 }
 
 @mixin a-head--4 {

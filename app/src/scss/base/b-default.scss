@@ -19,6 +19,10 @@ body {
   line-height: $default__leading;
 
   color: $default__color;
+
+  @include breakpoint($bp__cinema) {
+    font-size: 1.125em;
+  }
 }
 
 img {

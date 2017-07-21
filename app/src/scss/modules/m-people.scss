@@ -3,6 +3,8 @@
 
   @include a-wrap;
 
+  max-width: 70em;
+
   &__title {
     @include a-head--2;
   }
@@ -14,12 +16,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    margin-left: -.75em;
+    margin-right: -.75em;
+
+    @include breakpoint($bp__laptop) {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
   }
 
   &__item {
-    margin: 1.5em;
+    margin: .75em;
 
-    flex-basis: 20em;
+    flex-basis: 13em;
+
+    @include breakpoint($bp__laptop) {
+      margin: 1.5em;
+    }
   }
 
   &__icon {

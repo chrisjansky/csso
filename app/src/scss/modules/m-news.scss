@@ -5,23 +5,19 @@
 
   &__title {
     @include a-head--1;
-    margin-bottom: 1.5em;
   }
 
   &__item {
     @include clearfix;
 
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
   }
 
   &__holder {
     position: relative;
     overflow: hidden;
 
-    float: left;
-    width: 50%;
-
-    padding-bottom: 33.333%;
+    margin-bottom: 1em;
 
     background-color: $c-color--150;
 
@@ -34,20 +30,31 @@
     .m-news__item:nth-child(4n) & {
       background-color: mistyrose;
     }
+
+    @include breakpoint($bp__tablet) {
+      float: left;
+      width: 50%;
+
+      padding-bottom: 33.333%;
+    }
   }
 
   &__thumb {
-    position: absolute;
-    left: 0;
-    top: 0;
+    @include breakpoint($bp__tablet) {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 
   &__body {
-    overflow: auto;
-
-    padding-left: 2em;
-
     text-align: left;
+
+    @include breakpoint($bp__tablet) {
+      overflow: auto;
+
+      padding-left: 2em;      
+    }
   }
   
   &__headline {
@@ -58,6 +65,8 @@
 
   &__date {
     color: $c-grey--600;
+
+    font-size: .75em;
   }
 
   &__content {
@@ -117,7 +126,6 @@
 
   &__cta {
     display: inline-block;
-    margin-top: 3em;
 
     @include button-large;
     
@@ -126,6 +134,10 @@
     &:hover,
     &:active {
       background-color: $c-grey--800;
+    }
+
+    @include breakpoint($bp__tablet) {
+      margin-top: 3em;
     }
   }
 

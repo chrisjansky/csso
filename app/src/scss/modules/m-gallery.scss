@@ -1,28 +1,59 @@
-.m-gallery {
+.m-gallery--full {
   @include a-wrap;
 
   border-bottom: 1px solid $c-grey--800;
 
   text-align: center;
 
-  &__list {
-    @include clearfix;
+  .m-gallery__item {
+    @include breakpoint($bp__phablet) {
+      float: left;
 
-    margin-left: -1em;
-    margin-right: -1em;
-  }
+      width: 50%;
+    }
 
-  &__item {
-    display: block;
+    @include breakpoint($bp__tablet) {
+      width: 33.333%;
+    }
 
-    float: left;
-    width: 33.333%;
-    box-sizing: border-box;
-
-    padding: 1em;
+    @include breakpoint($bp__desktop) {
+      width: 25%;
+    }
   }
 }
 
 .m-gallery--slim {
   margin-top: 2em;
+
+  .m-gallery__item {
+    float: left;
+
+    width: 50%;
+
+    @include breakpoint($bp__laptop) {
+      width: 33.333%;
+    }
+  }
+}
+
+.m-gallery {
+  &__list {
+    @include clearfix;
+
+    margin: -.625em;
+    @include breakpoint($bp__tablet) {
+      margin: -1em;
+    }
+  }
+
+  &__item {
+    display: block;
+    box-sizing: border-box;
+
+    padding: .625em;
+
+    @include breakpoint($bp__tablet) {
+      padding: 1em;
+    }
+  }
 }

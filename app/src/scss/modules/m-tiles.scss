@@ -1,11 +1,15 @@
 .m-tiles {
-  padding: .5em;
+  padding: .25em;
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__body {
+    @include reset-children;
+    margin-top: 1em;
+
     a {
       @include link-black(true);
     }
@@ -18,12 +22,13 @@
   &__map {
     position: relative;
 
-    flex-basis: 0;
+    min-height: 15em;
+
+    flex-basis: 16em;
     flex-grow: 1;
 
-    padding: 2em;
-
-    margin: .5em;
+    padding: 1.25em;
+    margin: .25em;
 
     & > * {
       position: absolute;
@@ -42,11 +47,11 @@
   flex-direction: column;
   justify-content: space-between;
 
-  flex-basis: 0;
+  flex-basis: 16em;
   flex-grow: 1;
 
-  margin: .5em;
-  padding: 2em;
+  margin: .25em;
+  padding:: 1.25em;
 
   min-height: 50vmin;
 

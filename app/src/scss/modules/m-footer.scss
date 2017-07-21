@@ -1,11 +1,16 @@
 .m-footer {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
 
-  line-height: 2;
+  @include breakpoint($bp__tablet) {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
 
   &__content {
-    display: flex;
+    @include breakpoint($bp__tablet) {
+      display: flex;
+    }
   }
 
   &__title {
@@ -26,6 +31,10 @@
       @include link-black(true);
     }
 
+    li:not(:first-child) {
+      margin-top: .75em;
+    }
+
     li:nth-child(2) {
       margin-bottom: 1.5em;
     }
@@ -33,7 +42,11 @@
     span {
       display: inline-block;
 
-      min-width: 8em;
+      margin-right: 1em;
+
+      @include breakpoint($bp__tablet) {
+        min-width: 7em;
+      }
     }
   }
 
@@ -42,16 +55,20 @@
 
     opacity: .5;
 
-    margin-top: 5em;
+    margin-top: 4em;
   }
 }
 
 [class^="m-footer__block--"],
 [class*=" m-footer__block--"] {
-  padding: 4em;
+  padding: 1.25em;
 
   flex-basis: 0;
   flex-grow: 1;
+
+  @include breakpoint($bp__laptop) {
+    padding: 4em;
+  }
 }
 
 .m-footer__end {

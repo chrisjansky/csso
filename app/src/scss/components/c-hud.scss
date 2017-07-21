@@ -5,16 +5,26 @@
   width: 100%;
   z-index: 500;
 
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  @include breakpoint($bp__tablet) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    @include breakpoint($bp__tablet) {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
   }
 
   &__button {
@@ -25,8 +35,8 @@
 
     padding: .5em 1em;
 
+    font-size: .625em;
     font-weight: $font__sans--semibold;
-    font-size: .75em;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .125em;
@@ -36,6 +46,10 @@
 
     &:focus {
       outline: 0;
+    }
+
+    @include breakpoint($bp__tablet) {
+      font-size: .75em;
     }
   }
 }
