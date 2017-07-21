@@ -21,7 +21,7 @@ body {
   color: $default__color;
 
   @include breakpoint($bp__cinema) {
-    font-size: 1.125em;
+    font-size: 1.25em;
   }
 }
 
