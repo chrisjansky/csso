@@ -9,6 +9,7 @@
   &__body {
     @include reset-children;
     margin-top: 1em;
+    max-width: 35em;
 
     a {
       @include link-black(true);
