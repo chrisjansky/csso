@@ -1,0 +1,96 @@
+.c-form {
+  margin-left: -.5em;
+  margin-right: -.5em;
+
+  &__title {
+    @include a-head--3;
+  }
+
+  &__row {
+    @include breakpoint(max-width $bp__tablet - 1) {
+      max-width: 30em;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoint($bp__tablet) {
+      display: flex;
+      justify-content: center;
+
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
+    }
+
+    &:last-child {
+      margin-top: 2em;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    flex-grow: 1;
+  }
+
+  &__label {
+    text-align: left;
+
+    font-size: .75em;
+
+    padding-left: 1.5rem;
+  }
+
+  &__input {
+    line-height: 1;
+
+    padding: .75em 1em;
+  }
+
+  &__textarea {
+    line-height: inherit;
+
+    padding: 1em;
+  }
+
+  &__input,
+  &__textarea {
+    flex-grow: 1;
+
+    appearance: none;
+
+    font-family: inherit;
+
+    margin: .5em;
+    border: 1px solid $c-grey--750;
+    border-radius: $radius--l;
+
+    &:focus {
+      outline: 0;
+      border-color: $c-color--220;
+    }
+  }
+
+  &__submit {
+    cursor: pointer;
+
+    @include button-large;
+    
+    font-family: inherit;
+    background-color: $c-grey--950;
+
+    &:hover,
+    &:active {
+      background-color: $c-grey--800;
+    }
+
+    &:focus {
+      background-color: $c-color--220;
+
+      outline: 0;
+    }
+  }
+}

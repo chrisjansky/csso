@@ -11,6 +11,8 @@
     padding-bottom: 2.5em;
   } @else if $padded == "top" {
     padding-top: 2.5em;
+  } @else if $padded == "bottom" {
+    padding-bottom: 2.5em;
   }
 
   @include breakpoint((min-width $bp__tablet) (max-width $bp__desktop - 1)) {
@@ -21,6 +23,8 @@
       padding-bottom: 4em;
     } @else if $padded == "top" {
       padding-top: 4em;
+    } @else if $padded == "bottom" {
+      padding-bottom: 4em;
     } 
   }
 
@@ -32,6 +36,8 @@
       padding-bottom: 7.5em;
     } @else if $padded == "top" {
       padding-top: 7.5em;
+    } @else if $padded == "bottom" {
+      padding-bottom: 7.5em;
     }
   }
 }

@@ -1,0 +1,113 @@
+extends _templates/_site
+
+mixin course
+  .m-projects__item
+    h2.m-projects__name
+      faker-lorem-sentence/
+    ul.m-projects__stats
+      li
+        strong Cena
+        |  2360 Kč
+      li
+        strong Termín
+        |  21. 09. 2017
+      li
+        strong Lektor
+        |  JUDr. Karel Zuska
+    .m-projects__content(data-find-external)
+      p
+        faker-lorem-paragraphs/
+      ul
+        each instance in [1, 2, 3, 4]
+          li
+            faker-lorem-sentence/
+      p
+        faker-lorem-paragraphs/
+
+    form.m-projects__form.c-form
+      h3.c-form__title Přihlásit se ke kurzu
+      .c-form__row
+        .c-form__cell
+          label.c-form__label Jméno a Příjmení
+          input.c-form__input(type="text", required, placeholder="Jana Nováková", autofocus)
+      .c-form__row
+        .c-form__cell
+          label.c-form__label E-mail
+          input.c-form__input(type="text", required, placeholder="novakova@email.cz")
+        .c-form__cell
+          label.c-form__label Telefon
+          input.c-form__input(type="text", required, placeholder="+420 777 111 222")
+      .c-form__row
+        .c-form__cell
+          label.c-form__label Poznámka
+          textarea.c-form__textarea(placeholder="Dobrý den, je ještě možné se na tento kurz registrovat?")
+      .c-form__row
+        input.c-form__submit(type="submit", value="Odeslat dotaz")
+
+    button.m-projects__expand(type="button", data-toggle="project", data-target=".m-projects__item")
+      include ../static/svg/icon-ellipsis.svg
+      | Číst více
+
+append template-variables
+  - var theme = "sa"
+
+block template-body
+  header.c-header--tall
+    .c-header__wrap
+      +hud
+
+      .c-header__body
+        h1.c-header__text(data-grep) #[strong Sociální akademie] poskytuje kvalitní vzdělávání v sociální oblasti &mdash; pro pracovníky, pěstouny i veřejnost.
+
+        a.c-header__button(href="#more") Více informací
+
+    .c-header__hero(style="background-image: url(src/static/img/services/service-sa.jpg)")
+
+  +menu("subpage")
+
+  #more.m-projects
+    h1.m-projects__title Kurzy pro sociální oblast
+
+    .m-projects__loop
+      each instance in [1, 2]
+        +course
+
+  .m-projects
+    h1.m-projects__title Kurzy pro náhradní rodinnou péči
+
+    mark.m-projects__note Aktuálně nejsou vypsány žádné kurzy.
+
+  .m-projects
+    h1.m-projects__title Kurzy pro veřejnost
+
+    .m-projects__loop
+      +course
+
+  #about.m-longform
+    .m-longform__wrap
+      h2.m-longform__title Podrobnosti služby
+      .c-editor.m-longform__content(data-find-external)
+        p Vzdělávací středisko Sociální akademie bylo založeno v roce 2012 a je jedním ze zařízení Centra sociálních služeb Ostrava, o.p.s.
+        p Našim cílem je poskytovat kvalitní vzdělávání pracovníkům v sociální oblasti a to jak lidem na pozici Pracovník v sociálních službách, tak i na pozicích Sociální pracovník a Vedoucí pracovník. Pořádáme kurzy i pro náhradní rodinnou péči.
+        p Při výběru lektorů a témat kurzů vycházíme z aktuální situace v sociálních službách a z požadavků personálu poskytovatelů sociálních služeb. Spolupracujeme s lektory, kteří jsou sami aktivně zapojení do dění v sociálních službách, mají vlastní praktickou zkušenost s prací v sociální oblasti, mnohdy tuto profesi vykonávají současně vedle lektorské činnosti. 
+
+      .m-longform__more
+        button.m-longform__expand(type="button", data-toggle="longform") Více informací
+
+      h2.m-longform__subtitle Zajímá Vás více?
+      .c-tabs(data-tabs)
+        .c-tabs__nav
+          button.c-tabs__link(data-tabs-link="#tab-1") Jak zažádat o službu
+          button.c-tabs__link(data-tabs-link="#tab-2") Podmínky služby
+        each tab in [1, 2]
+          .c-editor.c-tabs__item(id="tab-" + tab, data-tab)
+            p
+              faker-lorem-paragraphs/
+
+  include _partials/_contact
+
+  include _partials/_tiles
+
+  include _partials/_partners
+
+  +footer
