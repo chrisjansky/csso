@@ -1,8 +1,9 @@
+$c-color--170: hsb(50, 25, 100);
 $c-color--150: hsb(50, 55, 100);
 $c-color--140: hsb(40, 65, 100);
 
-$c-color--200: hsb(215, 100, 100);
-$c-color--250: hsb(215, 060, 100);
+$c-color--220: hsb(215, 060, 100);
+$c-color--250: hsb(215, 100, 100);
 $c-color--290: hsb(215, 100, 060);
 
 $c-color--300: hsb(085, 008, 096);
@@ -21,7 +22,7 @@ $c-grey--200: hsb(215, 020, 035);
 $c-grey--100: hsb(215, 020, 020);
 $c-grey--000: hsb(215, 002, 010);
 
-$c-link:    $c-color--200;
+$c-link:    $c-color--250;
 $c-visited: $c-link;
 $c-hover:   $c-color--290;
 $c-active:  $c-hover;
@@ -52,7 +53,7 @@ $c-dpc--900: hsb(200, 008, 100);
 $c-adm--500: hsb(040, 100, 095);
 $c-adm--900: hsb(100, 006, 100);
 
-$c-dmd--500: $c-color--200;
+$c-dmd--500: $c-color--250;
 $c-dmd--900: hsb(035, 010, 100);
 
 $c-sas--500: hsb(020, 065, 100);
