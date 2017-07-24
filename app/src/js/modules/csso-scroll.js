@@ -8,6 +8,8 @@ module.exports = function() {
       var target = this.getAttribute("href");
 
       document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+
+      return false;
     });
 
   }
