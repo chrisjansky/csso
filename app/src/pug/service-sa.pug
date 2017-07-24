@@ -66,22 +66,29 @@ block template-body
   +menu("subpage")
 
   #more.m-projects
-    h1.m-projects__title Kurzy pro sociální oblast
+    .c-tabs(data-tabs)
+      .c-tabs__nav
+        button.c-tabs__link.tab--is-active(data-tabs-link="#tab-1") Kurzy pro sociální oblast
+        button.c-tabs__link(data-tabs-link="#tab-2") Kurzy pro náhradní rodinnou péči
+        button.c-tabs__link(data-tabs-link="#tab-3") Kurzy pro veřejnost
 
-    .m-projects__loop
-      each instance in [1, 2]
-        +course
+      .c-tabs__item.tab--is-active(id="tab-1", data-tab)
+        h1.m-projects__title Kurzy pro sociální oblast
 
-  .m-projects
-    h1.m-projects__title Kurzy pro náhradní rodinnou péči
+        .m-projects__loop
+          each instance in [1, 2]
+            +course
 
-    mark.m-projects__note Aktuálně nejsou vypsány žádné kurzy.
+      .c-tabs__item(id="tab-2", data-tab)
+        h1.m-projects__title Kurzy pro náhradní rodinnou péči
 
-  .m-projects
-    h1.m-projects__title Kurzy pro veřejnost
+        mark.m-projects__note Aktuálně nejsou vypsány žádné kurzy.
 
-    .m-projects__loop
-      +course
+      .c-tabs__item(id="tab-3", data-tab)
+        h1.m-projects__title Kurzy pro veřejnost
+
+        .m-projects__loop
+          +course
 
   #about.m-longform
     .m-longform__wrap
