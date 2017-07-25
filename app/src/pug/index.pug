@@ -58,6 +58,16 @@ block template-body
       .m-longform__more
         button.m-longform__expand(type="button", data-toggle="longform") Více o nás
 
+      h2.m-longform__subtitle Zajímá Vás více?
+      .c-tabs(data-tabs)
+        .c-tabs__nav
+          button.c-tabs__link(data-tabs-link="#tab-1") Jak zažádat o službu
+          button.c-tabs__link(data-tabs-link="#tab-2") Podmínky služby
+        each tab in [1, 2]
+          .c-editor.c-tabs__item(id="tab-" + tab, data-tab)
+            p
+              faker-lorem-paragraphs/
+
   include _partials/_contact
 
   include _partials/_tiles
