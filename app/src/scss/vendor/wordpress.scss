@@ -1,0 +1,23 @@
+/* Specificity issue */
+
+.wpcf7-form {
+  .wpcf7-form-control-wrap {
+    @extend .c-form__validate;
+  }
+
+  span.wpcf7-not-valid-tip {
+    @extend .c-form__alert;
+  }
+
+  div.wpcf7-response-output {
+    border: 0;
+  }
+
+  div.wpcf7-validation-errors {
+    @extend .c-form__error--negative;
+  }
+
+  div.wpcf7-mail-sent-ok {
+    @extend .c-form__error--positive;
+  }
+}

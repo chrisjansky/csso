@@ -29,20 +29,26 @@ mixin course
       .c-form__row
         .c-form__cell
           label.c-form__label Jméno a Příjmení
-          input.c-form__input(type="text", required, placeholder="Jana Nováková", autofocus)
+          span.c-form__validate
+            input.c-form__input(type="text", required, placeholder="Jana Nováková", autofocus)
+            span.c-form__alert(role="alert") Toto pole je povinné.
       .c-form__row
         .c-form__cell
           label.c-form__label E-mail
-          input.c-form__input(type="text", required, placeholder="novakova@email.cz")
+          span.c-form__validate
+            input.c-form__input(type="text", required, placeholder="novakova@email.cz")
         .c-form__cell
           label.c-form__label Telefon
-          input.c-form__input(type="text", required, placeholder="+420 777 111 222")
+          span.c-form__validate
+            input.c-form__input(type="text", required, placeholder="+420 777 111 222")
       .c-form__row
         .c-form__cell
           label.c-form__label Poznámka
-          textarea.c-form__textarea(placeholder="Dobrý den, je ještě možné se na tento kurz registrovat?")
+          span.c-form__validate
+            textarea.c-form__textarea(placeholder="Dobrý den, je ještě možné se na tento kurz registrovat?")
       .c-form__row
         input.c-form__submit(type="submit", value="Odeslat dotaz")
+      .c-form__error--negative(role="alert") Některá pole obsahují chybu. Opravte prosím zadané údaje a zkuste to znovu.
 
     button.m-projects__expand(type="button", data-toggle="project", data-target=".m-projects__item")
       include ../static/svg/icon-ellipsis.svg

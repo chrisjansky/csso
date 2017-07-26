@@ -29,14 +29,12 @@
   }
 
   &__cell {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-
     flex-grow: 1;
   }
 
   &__label {
+    display: block;
+
     text-align: left;
 
     font-size: .75em;
@@ -44,12 +42,18 @@
     padding-left: 1.5rem;
   }
 
-  &__input {
-    padding: .75em 1em;
+  &__validate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  &__textarea {
-    padding: 1em;
+  &__alert {
+    margin-top: .5em;
+
+    font-size: .75em;
+
+    color: $c-negative--500;
   }
 
   &__input,
@@ -71,6 +75,14 @@
     }
   }
 
+  &__input {
+    padding: .75em 1em;
+  }
+
+  &__textarea {
+    padding: 1em;
+  }
+
   &__submit {
     cursor: pointer;
 
@@ -90,4 +102,23 @@
       outline: 0;
     }
   }
+}
+
+.c-form__error--positive,
+.c-form__error--negative {
+  margin: 2em 0 0;
+
+  padding: 1em 1.5em;
+
+  border-radius: $radius--l;
+}
+
+.c-form__error--positive {
+  color: $c-positive--500;
+  background-color: $c-positive--800;
+}
+
+.c-form__error--negative {
+  color: $c-negative--500;
+  background-color: $c-negative--800;
 }

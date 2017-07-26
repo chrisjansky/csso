@@ -30,6 +30,12 @@ $c-active:  $c-hover;
 $c-select__bg:   black;
 $c-select__text: white;
 
+$c-positive--800:   hsb(075, 010, 096);
+$c-positive--500:   hsb(075, 090, 060);
+
+$c-negative--800:   hsb(030, 008, 100);
+$c-negative--500:   hsb(015, 080, 100);
+
 $c-phone:           hsb(190, 070, 085);
 $c-phone--hover:    hsb(190, 080, 095);
 $c-email:           hsb(205, 100, 100);
