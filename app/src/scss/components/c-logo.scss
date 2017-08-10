@@ -27,4 +27,10 @@
 
     font-weight: $font__sans--regular;
   }
+
+  &__suffix {
+    @include breakpoint(max-width $bp__phablet - 1) {
+      display: none;
+    }
+  }
 }
