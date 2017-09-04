@@ -41,8 +41,13 @@
     text-transform: uppercase;
     letter-spacing: .125em;
 
-    color: currentColor;
-    background-color: white;
+    color: white;
+    background-color: black;
+
+    &:hover,
+    &:active {
+      opacity: .75;
+    }
 
     &:focus {
       outline: 0;
@@ -50,6 +55,8 @@
 
     @include breakpoint($bp__tablet) {
       font-size: .75em;
+
+      padding: .75em 1.5em;
     }
   }
 }
