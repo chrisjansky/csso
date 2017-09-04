@@ -21,6 +21,10 @@
       width: 1.5em;
     }
 
+    &:active {
+      color: $c-grey--500;
+    }
+
     &:focus {
       outline: 0;
     }
