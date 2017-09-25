@@ -3,6 +3,18 @@ mixin hud
     .c-hud__wrap
       a.c-logo(href="index.html")
         img.c-logo__image(src="src/static/img/logo-csso.png", alt="Logo CSSO")
-        strong.c-logo__text Centrum sociálních služeb Ostrava#[span.c-logo__suffix , o.p.s.]
+        strong.c-logo__text
+          | C
+          span.c-logo__hide entrum 
+          | s
+          span.c-logo__hide ociálních 
+          | s
+          span.c-logo__hide lužeb 
+          | O
+          span.c-logo__hide strava, o.p.s.
 
-      button.c-hud__button(type="button", data-toggle="menu") Menu
+      .c-hud__ui
+        form.c-hud__form(method="get" action="http://www.google.com/search" target="_blank")
+          input(type="hidden" name="sitesearch" value="www.css-ostrava.cz")
+          input.c-hud__search(type="search" name="q" results="0" placeholder="Hledat" value="")
+        button.c-hud__button(type="button" data-toggle="menu") Menu

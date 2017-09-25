@@ -30,10 +30,15 @@
     vertical-align: middle;
 
     font-weight: $font__sans--semibold;
+
+    @include breakpoint(max-width $bp__tablet - 1) {
+      text-transform: uppercase;
+      letter-spacing: .125em;
+    }
   }
 
-  &__suffix {
-    @include breakpoint(max-width $bp__phablet - 1) {
+  &__hide {
+    @include breakpoint(max-width $bp__tablet - 1) {
       display: none;
     }
   }
