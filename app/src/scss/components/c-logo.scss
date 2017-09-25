@@ -8,6 +8,10 @@
   @include breakpoint(max-width $bp__tablet - 1) {
     font-size: .75em;
   }
+
+  @include breakpoint(min-width $bp__laptop) {
+    font-size: 1.25em;
+  }
   
   &:link,
   &:visited {
@@ -25,7 +29,7 @@
   &__text {
     vertical-align: middle;
 
-    font-weight: $font__sans--regular;
+    font-weight: $font__sans--semibold;
   }
 
   &__suffix {
