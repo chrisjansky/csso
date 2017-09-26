@@ -1,10 +1,10 @@
 extends _templates/_site
 
 mixin course
-  .m-projects__item
-    h2.m-projects__name
+  a.m-seminar__item(href="seminar-detail.html")
+    h2.m-seminar__name
       faker-lorem-sentence/
-    ul.m-projects__stats
+    ul.m-seminar__stats
       li
         strong Cena
         |  2360 Kč
@@ -14,45 +14,6 @@ mixin course
       li
         strong Lektor
         |  JUDr. Karel Zuska
-    .m-projects__content(data-find-external)
-      p
-        faker-lorem-paragraphs/
-      ul
-        each instance in [1, 2, 3, 4]
-          li
-            faker-lorem-sentence/
-      p
-        faker-lorem-paragraphs/
-
-    form.m-projects__form.c-form
-      h3.c-form__title Přihlásit se ke kurzu
-      .c-form__row
-        .c-form__cell
-          label.c-form__label Jméno a Příjmení
-          span.c-form__validate
-            input.c-form__input(type="text", required, placeholder="Jana Nováková", autofocus)
-            span.c-form__alert(role="alert") Toto pole je povinné.
-      .c-form__row
-        .c-form__cell
-          label.c-form__label E-mail
-          span.c-form__validate
-            input.c-form__input(type="text", required, placeholder="novakova@email.cz")
-        .c-form__cell
-          label.c-form__label Telefon
-          span.c-form__validate
-            input.c-form__input(type="text", required, placeholder="+420 777 111 222")
-      .c-form__row
-        .c-form__cell
-          label.c-form__label Poznámka
-          span.c-form__validate
-            textarea.c-form__textarea(placeholder="Dobrý den, je ještě možné se na tento kurz registrovat?")
-      .c-form__row
-        input.c-form__submit(type="submit", value="Odeslat dotaz")
-      .c-form__error--negative(role="alert") Některá pole obsahují chybu. Opravte prosím zadané údaje a zkuste to znovu.
-
-    button.m-projects__expand(type="button", data-toggle="project", data-target=".m-projects__item")
-      include ../static/svg/icon-ellipsis.svg
-      | Číst více
 
 append template-variables
   - var theme = "sa"
@@ -71,7 +32,7 @@ block template-body
 
   +menu("subpage")
 
-  #more.m-projects
+  #more.m-seminar
     .c-tabs(data-tabs)
       .c-tabs__nav
         button.c-tabs__link.tab--is-active(data-tabs-link="#tab-1") Kurzy pro sociální oblast
@@ -79,22 +40,24 @@ block template-body
         button.c-tabs__link(data-tabs-link="#tab-3") Kurzy pro veřejnost
 
       .c-tabs__item.tab--is-active(id="tab-1", data-tab)
-        h1.m-projects__title Kurzy pro sociální oblast
+        h1.m-seminar__title Kurzy pro sociální oblast
 
-        .m-projects__loop
-          each instance in [1, 2]
+        .m-seminar__loop
+          each instance in [1, 2, 3, 4, 5]
             +course
 
       .c-tabs__item(id="tab-2", data-tab)
-        h1.m-projects__title Kurzy pro náhradní rodinnou péči
+        h1.m-seminar__title Kurzy pro náhradní rodinnou péči
 
-        mark.m-projects__note Aktuálně nejsou vypsány žádné kurzy.
+        mark.m-seminar__note Aktuálně nejsou vypsány žádné kurzy.
 
       .c-tabs__item(id="tab-3", data-tab)
-        h1.m-projects__title Kurzy pro veřejnost
+        h1.m-seminar__title Kurzy pro veřejnost
 
-        .m-projects__loop
+        .m-seminar__loop
           +course
+
+  include _partials/_news
 
   #about.m-longform
     .m-longform__wrap

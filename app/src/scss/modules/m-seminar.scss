@@ -1,0 +1,97 @@
+.m-seminar {
+  @include a-wrap("both");
+  max-width: 80em;
+
+  text-align: center;
+
+  &__title {
+    @include a-head--1;
+  }
+
+  &__loop {
+    margin: -.5em;
+
+    @include breakpoint($bp__tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    flex-basis: calc(50% - 1em);
+    box-sizing: border-box;
+
+    margin: .5em;
+    padding: 1em 1.5em;
+
+    box-shadow: $shadow--2;
+    border-radius: $radius--l;
+
+    text-align: left;
+  }
+
+  &__name {
+    @include a-head--2;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__note {
+    display: inline-block;
+
+    color: currentColor;
+    background-color: $c-color--170;
+
+    padding: 1em 2em;
+    border-radius: $radius--l;
+  }
+
+  &__stats {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 1.5em 0 0 -1em;
+
+    font-size: .75em;
+    color: $c-grey--200;
+
+    li {
+      display: inline-block;
+
+      margin: .5em;
+    }
+
+    strong {
+      display: inline-block;
+      padding: .25em .75em .375em;
+      margin-left: .5em;
+      margin-right: .5em;
+
+      font-weight: $font__sans--semibold;
+
+      color: $c-grey--000;
+      background-color: $c-grey--900;
+      border-radius: $radius--l;
+    }
+  }
+
+  /* Detail only */
+  &__detail {
+    @include a-wrap("both");
+    text-align: left;
+
+    max-width: 50em;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__form {
+    margin-top: 2em;
+  }
+}

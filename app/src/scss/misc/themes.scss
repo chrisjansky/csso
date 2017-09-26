@@ -110,7 +110,8 @@
   }
 }
 .theme--sa {
-  .c-header--tall {
+  .c-header--tall,
+  .c-header--slim {
     color: $c-sa--500;
     background-color: $c-sa--900;
   }

@@ -1,0 +1,74 @@
+extends _templates/_site
+
+append template-variables
+  - var theme = "sa"
+
+block template-body
+  header.c-header--slim
+    .c-header__wrap
+      +hud
+
+      .c-header__body
+        .c-header__inline
+          a(href="service-sa.html#more").c-header__back
+            svg(viewBox="0 0 28 28", xmlns="http://www.w3.org/2000/svg")
+              path(d="M14,3 L3,14 L14,25")
+              path(d="M3,14 L25,14")
+
+          h1.c-header__title Název kurzu
+
+        ul.m-seminar__stats
+          li
+            strong Cena
+            |  2360 Kč
+          li
+            strong Termín
+            |  21. 09. 2017
+          li
+            strong Lektor
+            |  JUDr. Karel Zuska
+
+  .m-seminar__detail
+    .m-seminar__content(data-find-external)
+      p
+        faker-lorem-paragraphs/
+      ul
+        each instance in [1, 2, 3, 4]
+          li
+            faker-lorem-sentence/
+      p
+        faker-lorem-paragraphs/
+
+    form.m-seminar__form.c-form
+      h3.c-form__title Přihlásit se ke kurzu
+      .c-form__row
+        .c-form__cell
+          label.c-form__label Jméno a Příjmení
+          span.c-form__validate
+            input.c-form__input(type="text", required, placeholder="Jana Nováková", autofocus)
+            span.c-form__alert(role="alert") Toto pole je povinné.
+      .c-form__row
+        .c-form__cell
+          label.c-form__label E-mail
+          span.c-form__validate
+            input.c-form__input(type="text", required, placeholder="novakova@email.cz")
+        .c-form__cell
+          label.c-form__label Telefon
+          span.c-form__validate
+            input.c-form__input(type="text", required, placeholder="+420 777 111 222")
+      .c-form__row
+        .c-form__cell
+          label.c-form__label Poznámka
+          span.c-form__validate
+            textarea.c-form__textarea(placeholder="Dobrý den, je ještě možné se na tento kurz registrovat?")
+      .c-form__row
+        input.c-form__submit(type="submit", value="Odeslat dotaz")
+      .c-form__error--negative(role="alert") Některá pole obsahují chybu. Opravte prosím zadané údaje a zkuste to znovu.
+
+  +menu("subpage")
+
+  include _partials/_contact
+
+  include _partials/_partners
+
+  +footer

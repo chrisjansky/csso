@@ -1,7 +1,4 @@
 .c-form {
-  margin-left: -.5em;
-  margin-right: -.5em;
-
   &__title {
     @include a-head--3;
   }
@@ -65,7 +62,7 @@
     font-family: inherit;
     line-height: inherit;
 
-    margin: .5em;
+    margin: .5em .25em;
     border: 1px solid $c-grey--750;
     border-radius: $radius--l;
 
