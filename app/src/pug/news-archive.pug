@@ -9,13 +9,13 @@ block template-body
       +hud
 
       .c-header__body
-        a(href="index.html").c-header__back
-          svg(viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg")
-            path(d="M12,1 L1,12 L12,23")
-            path(d="M1,12 L23,12")
-          | Zpět
+        .c-header__inline
+          a(href="index.html").c-header__back
+            svg(viewBox="0 0 28 28", xmlns="http://www.w3.org/2000/svg")
+              path(d="M14,3 L3,14 L14,25")
+              path(d="M3,14 L25,14")
 
-        h1.c-header__text Archiv novinek
+          h1.c-header__title Archiv novinek
 
   +menu("subpage")
 

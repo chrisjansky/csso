@@ -54,6 +54,11 @@
     }
   }
 
+  &__inline {
+    display: flex;
+    align-items: center;
+  }
+
   &__text {
     @include a-head--2;
 
@@ -62,6 +67,11 @@
     strong {
       font-weight: $font__sans--semibold;
     }
+  }
+
+  &__title {
+    @include a-head--1;
+    margin: 0;
   }
 
   &__button {
@@ -85,18 +95,16 @@
   }
 
   &__back {
-    display: inline-block;
+    line-height: 0;
+
+    margin-right: 1em;
     
     svg {
+      width: 1.75em;
+
       fill: none;
       stroke: currentColor;
-      stroke-width: 1;
-
-      width: 1.5em;
-
-      vertical-align: middle;
-
-      margin-right: 1em;
+      stroke-width: 5;
     }
   }
 
