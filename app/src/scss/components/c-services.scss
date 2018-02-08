@@ -34,6 +34,7 @@
 
     .c-services__active & {
       color: white;
+      background-color: $c-color--400;
     }
 
     .c-services__link:hover & {
